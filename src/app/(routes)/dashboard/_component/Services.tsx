@@ -21,8 +21,6 @@ const Services = () => {
                 <Image
                   className='animate__animated animate__fadeInLeft animate__slow animate__delay-1s'
                   src={imageServices}
-                  width={300}
-                  height={300}
                   quality={100}
                   alt='MOBILE SERVICE'
                   id={styles.serImage}
@@ -35,70 +33,66 @@ const Services = () => {
                   className='animate__animated animate__fadeInRight animate__slow animate__delay-2s'>
                   MOBILE SERVICE
                 </Title>
-                <Paragraph
-                  id={styles.serContent}
-                  className='hidden md:block animate__animated animate__fadeInRight animate__delay-3s'>
-                  CCS has attained the{" "}
-                  <span className={`${styles.colorBlue1} font-bold`}>
-                    Mobile Virtual Network Operator License (MVNO)
-                  </span>{" "}
-                  in 2009, where we provide postpaid mobile plans to our
-                  customers. <br /> CCS had maintained close working
-                  relationship with our existing backend providers, in providing
-                  attractive and competitive pricing plans offering to our
-                  customers. <br /> We have built a good base of customers who
-                  are enjoying good pricing schemes and maintaining a responsive
-                  customer service team, to assist in resolving their day-to-day
-                  mobile issues. <br /> We are able to provide an in-depth
-                  analysis on your existing mobile bills and defined the most
-                  economical plans to suit your needs.
-                </Paragraph>
-                <Paragraph
-                  className='xs:hidden sm:block md:hidden animate__animated animate__fadeInRight animate__delay-3s'
-                  id={styles.serContent}
-                  ellipsis={{
-                    rows: 12,
-                    expandable: true,
-                    symbol: <RightOutlined className={styles.colorBlue2} />,
-                  }}>
-                  CCS has attained the{" "}
-                  <span className={`${styles.colorBlue1} font-bold`}>
-                    Mobile Virtual Network Operator License (MVNO)
-                  </span>{" "}
-                  in 2009, where we provide postpaid mobile plans to our
-                  customers. <br /> CCS had maintained close working
-                  relationship with our existing backend providers, in providing
-                  attractive and competitive pricing plans offering to our
-                  customers. <br /> We have built a good base of customers who
-                  are enjoying good pricing schemes and maintaining a responsive
-                  customer service team, to assist in resolving their day-to-day
-                  mobile issues. <br /> We are able to provide an in-depth
-                  analysis on your existing mobile bills and defined the most
-                  economical plans to suit your needs.
-                </Paragraph>
-                <Paragraph
-                  className='xs:block sm:hidden animate__animated animate__fadeInRight animate__delay-3s'
-                  id={styles.serContent}
-                  ellipsis={{
-                    rows: 6,
-                    expandable: true,
-                    symbol: <RightOutlined className={styles.colorBlue2} />,
-                  }}>
-                  CCS has attained the{" "}
-                  <span className={`${styles.colorBlue1} font-bold`}>
-                    Mobile Virtual Network Operator License (MVNO)
-                  </span>{" "}
-                  in 2009, where we provide postpaid mobile plans to our
-                  customers. <br /> CCS had maintained close working
-                  relationship with our existing backend providers, in providing
-                  attractive and competitive pricing plans offering to our
-                  customers. <br /> We have built a good base of customers who
-                  are enjoying good pricing schemes and maintaining a responsive
-                  customer service team, to assist in resolving their day-to-day
-                  mobile issues. <br /> We are able to provide an in-depth
-                  analysis on your existing mobile bills and defined the most
-                  economical plans to suit your needs.
-                </Paragraph>
+                <div id={styles.serContent}>
+                  <Paragraph className='hidden md:block animate__animated animate__fadeInRight animate__delay-3s'>
+                    <p>
+                      CCS has attained the{" "}
+                      <span className={`${styles.colorBlue1} font-bold`}>
+                        Mobile Virtual Network Operator License (MVNO)
+                      </span>{" "}
+                      in 2009, where we provide postpaid mobile plans to our
+                      customers.
+                    </p>
+                    <p>
+                      CCS had maintained close working relationship with our
+                      existing backend providers, in providing attractive and
+                      competitive pricing plans offering to our customers.
+                    </p>
+                    <p>
+                      We have built a good base of customers who are enjoying
+                      good pricing schemes and maintaining a responsive customer
+                      service team, to assist in resolving their day-to-day
+                      mobile issues.
+                    </p>
+                    <p>
+                      We are able to provide an in-depth analysis on your
+                      existing mobile bills and defined the most economical
+                      plans to suit your needs.
+                    </p>
+                  </Paragraph>
+                  <Paragraph
+                    className='block md:hidden animate__animated animate__fadeInRight animate__delay-3s'
+                    ellipsis={{
+                      rows: 16,
+                      expandable: true,
+                      symbol: <RightOutlined className={styles.colorBlue2} />,
+                    }}>
+                    <p>
+                      CCS has attained the{" "}
+                      <span className={`${styles.colorBlue1} font-bold`}>
+                        Mobile Virtual Network Operator License (MVNO)
+                      </span>{" "}
+                      in 2009, where we provide postpaid mobile plans to our
+                      customers.
+                    </p>
+                    <p>
+                      CCS had maintained close working relationship with our
+                      existing backend providers, in providing attractive and
+                      competitive pricing plans offering to our customers.
+                    </p>
+                    <p>
+                      We have built a good base of customers who are enjoying
+                      good pricing schemes and maintaining a responsive customer
+                      service team, to assist in resolving their day-to-day
+                      mobile issues.
+                    </p>
+                    <p>
+                      We are able to provide an in-depth analysis on your
+                      existing mobile bills and defined the most economical
+                      plans to suit your needs.
+                    </p>
+                  </Paragraph>
+                </div>
               </Col>
             </Row>
             <div className='text-right animate__animated animate__fadeInRight animate__slow animate__delay-4s'>

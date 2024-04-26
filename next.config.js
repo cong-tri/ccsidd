@@ -19,4 +19,8 @@ module.exports = {
       },
     ],
   },
+  env: {
+    MAP_KEY: "AIzaSyCrqcQjQzZriX_nVK2ZA-EXKp67inaIvHU",
+    RECAPTCHA_SITE_KEY: "6LdXacYpAAAAAIlZrhLIuktKCwq-s2IVQVuM9-qJ",
+  },
 };

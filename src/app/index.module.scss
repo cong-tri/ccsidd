@@ -26,6 +26,29 @@ $spacing-50: 3.125rem; //50px
   color: $color-white;
 }
 
+.colorChanging {
+  font-weight: bold;
+  animation: colorChange 5s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: $color-blue2;
+  }
+  25% {
+    color: #e3f4f4;
+  }
+  50% {
+    color: $color-blue3;
+  }
+  75% {
+    color: #d3f4f4;
+  }
+  100% {
+    color: $color-blue3;
+  }
+}
+
 #title {
   margin-bottom: 50px;
   text-align: center;
@@ -33,17 +56,21 @@ $spacing-50: 3.125rem; //50px
   color: $color-blue2;
   font-size: 50px;
   text-transform: uppercase;
-  @media screen and (min-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 28px;
     margin-bottom: 1rem;
-  }
-  @media screen and (min-width: 576px) {
-    font-size: 36px;
-    margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
     font-size: 40px;
     margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1536px) {
+    font-size: 50px;
+    margin-bottom: 50px;
   }
   @media screen and (max-height: 440px) {
     font-size: 28px;
@@ -140,7 +167,128 @@ $spacing-50: 3.125rem; //50px
 // -------- end header component ----------
 
 // --------- start footer component ------------
-
+#footerNav {
+  width: 100%;
+  background-color: white;
+  margin-top: 1rem;
+  padding: 2rem 0;
+  #footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin: 0 34px 2rem 34px;
+    border-bottom: 1px solid $color-blue1;
+    #footerLogoLink {
+      margin-left: 6px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      #footerLogo {
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        @media screen and (max-width: 576px) {
+          height: 40px;
+          width: 40px;
+        }
+        @media screen and (max-width: 768px) {
+          height: 55px;
+          width: 55px;
+        }
+      }
+      #footerCompanyName {
+        width: auto;
+        font-size: 30px;
+        line-height: 35px;
+        color: $color-blue1;
+        font-weight: 700;
+        margin-left: 20px;
+        @media screen and (max-width: 576px) {
+          font-size: 24px;
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 24px;
+          margin-left: 10px;
+        }
+        @media screen and (min-width: 1280px) {
+          font-size: 30px;
+          margin-left: 20px;
+        }
+        @media screen and (min-width: 1536px) {
+          font-size: 35px;
+          margin-left: 20px;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        margin-left: 0;
+        margin-bottom: 24px;
+      }
+    }
+    #footerLink {
+      text-align: center;
+      a {
+        font-size: 18px;
+        color: $color-blue2;
+        font-weight: 600;
+        margin: 0 1rem;
+        transition: all 0.5s;
+        &:hover {
+          color: $color-blue1;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 16px;
+          margin: 0 1rem 0 0;
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 18px;
+          margin: 0 1rem;
+        }
+        @media screen and (min-width: 1280px) {
+          font-size: 20px;
+          margin: 0 1rem;
+        }
+        @media screen and (min-width: 1536px) {
+          font-size: 25px;
+          margin: 0 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 576px) {
+      display: block;
+      padding-bottom: 24px;
+      margin: 0 24px 24px 24px;
+    }
+  }
+  #footerCopyRight {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: $color-blue1;
+    br {
+      display: none;
+      @media screen and (max-width: 576px) {
+        display: block;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1536px) {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding: 20px 0;
+  }
+}
 // --------- end footer component ------------
 
 // -------- end global components -----------
@@ -162,22 +310,12 @@ $spacing-50: 3.125rem; //50px
       text-align: left;
       line-height: 80px;
       @media screen and (min-width: 360px) {
-        font-size: 30px;
+        font-size: 35px;
         line-height: 40px;
-      }
-      @media screen and (min-width: 576px) {
-        margin-top: 0;
-        font-size: 40px;
-        line-height: 60px;
       }
       @media screen and (min-width: 768px) {
         margin-top: 0;
-        font-size: 50px;
-        line-height: 70px;
-      }
-      @media screen and (min-width: 992px) {
-        margin-top: 0;
-        font-size: 50px;
+        font-size: 60px;
         line-height: 70px;
       }
       @media screen and (min-width: 1280px) {
@@ -198,38 +336,31 @@ $spacing-50: 3.125rem; //50px
         @media screen and (min-width: 360px) {
           display: none;
         }
-        @media screen and (min-width: 576px) {
-          display: none;
-        }
-        @media screen and (min-width: 640px) {
-          display: none;
-        }
         @media screen and (min-width: 768px) {
+          display: none;
+        }
+        @media screen and (min-width: 1280px) {
           display: block;
         }
       }
       @media screen and (min-width: 360px) {
-        font-size: 14px;
-        padding: 0;
-        margin: 20px 0;
-      }
-      @media screen and (min-width: 576px) {
         font-size: 16px;
-        padding: 0;
-        margin: 20px 0;
-      }
-      @media screen and (min-width: 768px) {
-        font-size: 18px;
         padding: 0;
         margin: 30px 0;
       }
-      @media screen and (min-width: 992px) {
-        font-size: 18px;
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
         padding: 0;
         margin: 30px 0;
       }
       @media screen and (min-width: 1280px) {
         font-size: 20px;
+        line-height: 40px;
+        padding: 0;
+        margin: 30px 0;
+      }
+      @media screen and (min-width: 1536px) {
+        font-size: 24px;
         line-height: 40px;
         padding: 0;
         margin: 30px 0;
@@ -240,7 +371,6 @@ $spacing-50: 3.125rem; //50px
       border-radius: 10px;
       border: none;
       padding: 10px 20px;
-      // transition: all 1s;
       &:hover {
         background-color: $color-blue1;
       }
@@ -250,7 +380,7 @@ $spacing-50: 3.125rem; //50px
         color: $color-white;
         text-align: center;
         @media screen and (min-width: 360px) {
-          font-size: 18px;
+          font-size: 20px;
         }
         @media screen and (min-width: 576px) {
           font-size: 18px;
@@ -294,16 +424,16 @@ $spacing-50: 3.125rem; //50px
       h1 {
         clear: both;
         margin-top: 2rem;
-        font-size: 32px;
-        line-height: 28px;
+        font-size: 40px;
+        line-height: 40px;
         letter-spacing: normal;
         br {
-          display: none;
+          display: block;
         }
       }
       p {
         clear: both;
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: normal;
         line-height: 25px;
         padding: 0;
@@ -314,7 +444,7 @@ $spacing-50: 3.125rem; //50px
       }
       button {
         a {
-          font-size: 18px;
+          font-size: 20px;
         }
       }
     }
@@ -322,14 +452,8 @@ $spacing-50: 3.125rem; //50px
   @media screen and (min-width: 360px) {
     background-position: center;
   }
-  @media screen and (min-width: 576px) {
-    background-position: center;
-  }
   @media screen and (min-width: 768px) {
     background-position: center;
-  }
-  @media screen and (min-width: 1024px) {
-    padding-left: $spacing-50;
   }
   @media screen and (min-width: 1280px) {
     padding-left: $spacing-100;
@@ -341,8 +465,10 @@ $spacing-50: 3.125rem; //50px
 
 // ---------- start service component home page --------
 #service {
-  height: 100vh;
+  height: 100%;
   #serImage {
+    height: 400px;
+    width: fit-content;
     display: block;
     margin: 0 auto;
     object-fit: contain;
@@ -364,17 +490,9 @@ $spacing-50: 3.125rem; //50px
       font-size: 22px;
       margin: 10px 0;
     }
-    @media screen and (min-width: 576px) {
-      font-size: 26px;
-      margin: 10px 0;
-    }
     @media screen and (min-width: 768px) {
       font-size: 28px;
       margin: 10px 0;
-    }
-    @media screen and (min-width: 992px) {
-      font-size: 30px;
-      margin: 20px 0;
     }
     @media (min-height: 320px) and (max-height: 440px) {
       font-size: 20px;
@@ -382,37 +500,34 @@ $spacing-50: 3.125rem; //50px
     }
   }
   #serContent {
-    text-align: justify;
-    font-size: 20px;
-    color: $color-blue2;
-    font-weight: 500;
-    letter-spacing: 0.19px;
-    line-height: 22px;
-    @media screen and (min-width: 360px) {
-      font-size: 14px;
-      line-height: 30px;
-      margin-bottom: 2rem;
-    }
-    @media screen and (min-width: 576px) {
-      font-size: 16px;
-      line-height: 30px;
-    }
-    @media screen and (min-width: 768px) {
-      line-height: 30px;
-      font-size: 18px;
-    }
-    @media screen and (min-width: 992px) {
-      line-height: 30px;
-      font-size: 18px;
-    }
-    @media screen and (min-width: 1280px) {
+    p {
+      text-align: justify;
       font-size: 20px;
-      line-height: 30px;
-    }
-
-    @media (min-height: 320px) and (max-height: 440px) {
-      font-size: 14px;
-      margin-bottom: 0;
+      color: $color-blue2;
+      font-weight: 500;
+      letter-spacing: 0.19px;
+      margin-bottom: 1rem;
+      line-height: 22px;
+      @media screen and (min-width: 360px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+      @media screen and (min-width: 768px) {
+        line-height: 30px;
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @media screen and (min-width: 1536px) {
+        font-size: 25px;
+        line-height: 35px;
+      }
+      @media (min-height: 320px) and (max-height: 440px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
     }
   }
   #serBtnViewMore {
@@ -436,7 +551,7 @@ $spacing-50: 3.125rem; //50px
       padding: 6px 20px;
     }
     @media screen and (min-width: 768px) {
-      font-size: 10px;
+      font-size: 24px;
       padding: 6px 20px;
     }
     @media screen and (min-width: 992px) {
@@ -457,134 +572,98 @@ $spacing-50: 3.125rem; //50px
     }
   }
   @media screen and (min-width: 360px) {
-    margin: $spacing-80 0;
-    height: 100%;
-  }
-  @media screen and (min-width: 576px) {
-    margin: $spacing-80 0;
-    height: 100%;
+    margin: $spacing-100 0;
   }
   @media screen and (min-width: 768px) {
-    margin: 0;
-    height: 100vh;
-  }
-  @media screen and (min-width: 992px) {
-    margin: 0;
-    height: 100vh;
+    margin: 8rem 0;
   }
   @media screen and (min-width: 1280px) {
-    margin: 0;
-    height: 100vh;
+    margin: $spacing-100 0;
   }
   @media screen and (min-width: 1536px) {
-    margin: 0;
-    height: 100vh;
+    margin: 10rem 0;
   }
   @media screen and (max-height: 440px) {
-    height: 100%;
-    margin: $spacing-50 0;
+    margin: $spacing-80 0;
   }
 }
 // ---------- end service component home page --------
 
 // --------- start about us component home page -----------
 #aboutus {
-  height: 100vh;
+  height: 100%;
   #aboutContent {
-    #aboutContentText {
+    display: block;
+    p {
       color: $color-blue1;
       font-weight: 500;
-      padding: 0 10px 0 0;
-      font-size: 20px;
-      letter-spacing: 1px;
-      line-height: 28px;
-      text-align: left;
+      padding: 0;
+      margin-bottom: 1rem;
+      font-size: 25px;
+      letter-spacing: 2px;
+      line-height: 30px;
+      text-align: justify;
       @media screen and (min-width: 360px) {
         font-size: 16px;
-        line-height: 30px;
-        text-align: justify;
-        padding: 0;
-        margin-bottom: 0;
-      }
-      @media screen and (min-width: 576px) {
-        font-size: 16px;
-        line-height: 30px;
-        text-align: justify;
+        text-align: left;
       }
       @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-        padding: 0;
         font-size: 18px;
-        line-height: 30px;
+        text-align: left;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 18px;
         text-align: justify;
       }
-      @media screen and (min-width: 992px) {
-        font-size: 18px;
-        line-height: 30px;
+      @media screen and (min-width: 1536px) {
+        font-size: 25px;
         text-align: justify;
       }
-      @media (min-height: 320px) and (max-height: 440px) {
+      @media screen and (max-height: 440px) {
         display: none;
       }
     }
-    #aboutContentMinH {
+    @media screen and (max-height: 440px) {
       display: none;
-      color: $color-blue1;
-      font-weight: 500;
-      padding: 10px 0;
-      font-size: 14px;
-      letter-spacing: 1px;
-      line-height: 30px;
-      text-align: justify;
-      @media (min-height: 320px) and (max-height: 440px) {
-        display: block;
-      }
     }
   }
-  #aboutImage {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
-    @media screen and (min-width: 992px) {
-      height: 400px;
-      width: 400px;
-      object-fit: contain;
-      margin: 0 auto;
+  #aboutContentMinH {
+    display: none;
+    p {
+      color: $color-blue1;
+      font-weight: 500;
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 25px;
+      text-align: justify;
     }
-    @media (min-height: 320px) and (max-height: 440px) {
-      display: none;
+    @media screen and (max-height: 440px) {
+      display: block;
     }
   }
   @media screen and (min-width: 360px) {
-    margin: $spacing-80 0;
-    height: 100%;
-  }
-  @media screen and (min-width: 576px) {
-    margin: $spacing-80 0;
-    height: 100%;
+    margin: $spacing-100 0;
   }
   @media screen and (min-width: 768px) {
-    margin: 0;
-    height: 100vh;
-  }
-  @media screen and (min-width: 992px) {
     margin: $spacing-100 0;
-    height: 100%;
   }
   @media screen and (min-width: 1280px) {
-    margin: 0;
-    height: 100vh;
+    margin: $spacing-100 0;
+  }
+  @media screen and (min-width: 1536px) {
+    margin: 10rem 0;
   }
   @media screen and (max-height: 440px) {
-    margin: $spacing-50 0;
-    height: 100%;
+    margin: $spacing-80 0;
   }
 }
 // ---------- end about us component home page --------
 
 // --------- start profile component home page -----------
 #profile {
-  height: 100vh;
+  height: 100%;
   #timeline {
     #timelineLabelYear {
       color: $color-blue1;
@@ -689,16 +768,16 @@ $spacing-50: 3.125rem; //50px
     }
   }
   @media screen and (min-width: 360px) {
-    margin: $spacing-80 0;
-    height: 100%;
-  }
-  @media screen and (min-width: 576px) {
-    margin: $spacing-80 0;
-    height: 100%;
+    margin: $spacing-100 0;
   }
   @media screen and (min-width: 768px) {
-    margin: 3rem 0;
-    height: 100%;
+    margin: 8rem 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: $spacing-100 0;
+  }
+  @media screen and (min-width: 1536px) {
+    margin: 10rem 0;
   }
   @media (min-height: 320px) and (max-height: 440px) {
     margin: $spacing-50 0;
@@ -711,25 +790,30 @@ $spacing-50: 3.125rem; //50px
 
 // --------- start service page ---------
 #services {
-  margin: 150px 0;
-  height: 100vh;
-  @media screen and (min-width: 360px) {
-    margin: $spacing-100 0;
-  }
-  @media (min-height: 320px) and (max-height: 440px) {
-    margin: $spacing-50 0;
-  }
+  height: 100%;
   #serItems {
     text-align: center;
     margin: auto;
     #serItemsImage {
       object-fit: contain;
       margin: 0 auto;
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 360px) {
         height: $spacing-50;
         width: $spacing-50;
       }
-      @media (max-height: 440px) {
+      @media screen and (min-width: 768px) {
+        height: $spacing-80;
+        width: $spacing-80;
+      }
+      @media screen and (min-width: 1280px) {
+        height: $spacing-100;
+        width: $spacing-100;
+      }
+      @media screen and (min-width: 1536px) {
+        height: 150px;
+        width: 150px;
+      }
+      @media screen and (max-height: 440px) {
         width: $spacing-50;
         height: $spacing-50;
       }
@@ -740,9 +824,21 @@ $spacing-50: 3.125rem; //50px
       font-weight: 600;
       color: $color-blue1;
       letter-spacing: 0.28px;
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 360px) {
         font-size: 20px;
         margin: 10px 0;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 30px;
+        margin: 30px 0;
+      }
+      @media screen and (min-width: 1536px) {
+        font-size: 34px;
+        margin: 30px 0;
       }
       @media (min-height: 320px) and (max-height: 440px) {
         font-size: 20px;
@@ -756,7 +852,10 @@ $spacing-50: 3.125rem; //50px
       font-weight: 500;
       letter-spacing: 0.19px;
       line-height: 30px;
-      @media (min-height: 320px) and (max-height: 440px) {
+      @media screen and (min-width: 1536px) {
+        font-size: 20px;
+      }
+      @media screen and (max-height: 440px) {
         font-size: 14px;
       }
       #serItemsSymbol {
@@ -772,22 +871,42 @@ $spacing-50: 3.125rem; //50px
       width: 50%;
     }
   }
+  @media screen and (min-width: 360px) {
+    margin: 120px 0 $spacing-100 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1536px) {
+    margin: 12rem 0;
+  }
+  @media (min-height: 320px) and (max-height: 440px) {
+    margin: $spacing-50 0;
+  }
 }
+// --------- start component modal service page ---------
+#modSerName {
+  font-size: 32px;
+  font-weight: 700;
+  color: $color-blue1;
+  line-height: 40px;
+  padding: 2rem;
+}
+#modSerDesc {
+  font-size: 18px;
+  color: $color-gray;
+  padding: 0 2rem;
+}
+// --------- start component modal service page ---------
+
 // --------- end service page -----------
 
 // --------- start resources page ----------
 #resources {
-  height: 100vh;
-  // #resTitleTab {
-  //   margin-bottom: 0 !important;
-  //   font-size: 20px;
-  //   font-weight: bold;
-  //   color: $color-blue1;
-  //   text-align: center;
-  //   &:hover {
-  //     color: $color-white;
-  //   }
-  // }
+  height: 100%;
   #resContextCollapse {
     font-size: 16px;
     line-height: 30px;
@@ -797,15 +916,7 @@ $spacing-50: 3.125rem; //50px
       padding: 0;
       font-size: 14px;
     }
-    @media screen and (min-width: 576px) {
-      padding: 0;
-      font-size: 14px;
-    }
     @media screen and (min-width: 768px) {
-      padding: 0;
-      font-size: 16px;
-    }
-    @media screen and (min-width: 992px) {
       padding: 0;
       font-size: 16px;
     }
@@ -815,7 +926,8 @@ $spacing-50: 3.125rem; //50px
     }
     @media screen and (min-width: 1536px) {
       padding: 0;
-      font-size: 16px;
+      font-size: 20px;
+      line-height: 40px;
     }
     @media screen and (max-height: 440px) {
       font-size: 14px;
@@ -828,18 +940,44 @@ $spacing-50: 3.125rem; //50px
     #resourceTabMobile {
       display: block;
     }
-    height: 100%;
-    margin: $spacing-100 0;
+    margin: 120px 0 $spacing-100 0;
+  }
+  @media screen and (min-width: 768px) {
+    #resourceTabDesktop {
+      display: none;
+    }
+    #resourceTabMobile {
+      display: block;
+    }
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1280px) {
+    #resourceTabDesktop {
+      display: block;
+    }
+    #resourceTabMobile {
+      display: none;
+    }
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1536px) {
+    #resourceTabDesktop {
+      display: block;
+    }
+    #resourceTabMobile {
+      display: none;
+    }
+    margin: 12rem 0;
   }
   @media screen and (max-height: 440px) {
-    margin: $spacing-100 0;
+    margin: 7rem 0;
   }
 }
 // --------- end resources page ----------
 
 // --------- start contact page ----------
 #contact {
-  height: 100vh;
+  height: 100%;
   #contactForm {
     #labelForm {
       color: $color-blue1;
@@ -861,16 +999,26 @@ $spacing-50: 3.125rem; //50px
         background-color: $color-blue1;
       }
     }
-    @media screen and (min-width: 360px) {
+    @media screen and (max-width: 576px) {
       #labelForm {
         font-size: 18px;
       }
       #btnForm {
         padding: 10px 20px;
+        margin-top: 1rem;
         font-size: 16px;
       }
     }
-    @media (min-height: 320px) and (max-height: 440px) {
+    @media screen and (min-width: 768px) {
+      #labelForm {
+        font-size: 22px;
+      }
+      #btnForm {
+        padding: 10px 20px;
+        font-size: 20px;
+      }
+    }
+    @media screen and (max-height: 440px) {
       #labelForm {
         font-size: 18px;
       }
@@ -887,9 +1035,6 @@ $spacing-50: 3.125rem; //50px
       }
     }
     #contactLocation {
-      @media (min-height: 320px) and (max-height: 440px) {
-        margin-bottom: $spacing-50;
-      }
       #itemContactLocation {
         cursor: pointer;
         h1 {
@@ -900,6 +1045,11 @@ $spacing-50: 3.125rem; //50px
           color: $color-blue1;
           letter-spacing: 0.28px;
           text-align: left;
+          br {
+            @media screen and (min-width: 1536px) {
+              display: none;
+            }
+          }
         }
         p {
           font-weight: 500;
@@ -908,12 +1058,36 @@ $spacing-50: 3.125rem; //50px
           letter-spacing: 0.21px;
           text-align: left;
         }
-        @media screen and (min-width: 360px) {
+        @media screen and (max-width: 576px) {
           h1 {
-            font-size: 18px;
+            font-size: 20px;
           }
           p {
-            font-size: 14px;
+            font-size: 16px;
+          }
+        }
+        @media screen and (min-width: 768px) {
+          h1 {
+            font-size: 22px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+        @media screen and (min-width: 1280px) {
+          h1 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+        @media screen and (min-width: 1536px) {
+          h1 {
+            font-size: 26px;
+          }
+          p {
+            font-size: 20px;
           }
         }
         @media screen and (max-height: 440px) {
@@ -926,11 +1100,22 @@ $spacing-50: 3.125rem; //50px
           }
         }
       }
+      @media screen and (max-height: 440px) {
+        margin-bottom: $spacing-50;
+      }
     }
   }
   @media screen and (min-width: 360px) {
-    height: 100%;
-    margin: $spacing-100 0;
+    margin: 120px 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1536px) {
+    margin: 12rem 0;
   }
 }
 // --------- end contact page ----------
