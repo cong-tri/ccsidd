@@ -2,6 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Col, Modal, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
@@ -134,9 +135,12 @@ const ServicesPage = () => {
             {serName}
           </Title>
           <Paragraph id={styles.modSerDesc}>{serDesc}</Paragraph>
-          <p className='text-right '>
+          <p className='text-right'>
             For more information, please kindly{" "}
-            <span className={styles.colorBlue2}>contact</span> us.
+            <Link href={"/contact"} className={styles.colorBlue2}>
+              contact
+            </Link>{" "}
+            us.
           </p>
         </Modal>
       </>
@@ -164,7 +168,7 @@ const ServicesPage = () => {
                         xl={12}
                         xxl={12}
                         id={styles.serItems}
-                        key={index}>
+                        key={index + 1}>
                         <Image
                           src={item.serImage}
                           quality={100}
@@ -183,14 +187,15 @@ const ServicesPage = () => {
                           {item.serDesc}
                         </Paragraph>
                         <div className='text-right'>
-                          <span
-                            className={`${styles.colorChanging} cursor-pointer`}
+                          <button
+                            id={styles.serItemsBtnSeeMore}
+                            className={`${styles.colorChanging}`}
                             onClick={() => {
                               setOpen(true);
                               setData(item);
                             }}>
-                            see more
-                          </span>
+                            <i>see more</i>
+                          </button>
                         </div>
                       </Col>
                     </>

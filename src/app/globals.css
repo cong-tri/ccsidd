@@ -126,6 +126,7 @@ header {
 .ant-timeline .ant-timeline-item {
   padding-bottom: 35px !important;
 }
+
 @media screen and (max-width: 576px) {
   .ant-input {
     font-size: 16px !important;
@@ -143,6 +144,9 @@ header {
   }
   .ant-collapse-content-box {
     padding: 0;
+  }
+  .ant-modal .ant-modal-content {
+    padding: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
