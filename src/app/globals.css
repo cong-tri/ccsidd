@@ -82,9 +82,7 @@ header {
 .ant-drawer-content-wrapper {
   width: fit-content !important;
 }
-.ant-timeline {
-  margin: 10px !important;
-}
+
 .ant-tabs .ant-tabs-tab {
   background: transparent !important;
   border: 1px solid #1565c0 !important;
@@ -121,6 +119,12 @@ header {
   color: #00acc1 !important;
   border: 4px solid #1565c0 !important;
   border-radius: 10px !important;
+}
+.ant-timeline {
+  margin: 10px !important;
+}
+.ant-timeline .ant-timeline-item {
+  padding-bottom: 35px !important;
 }
 @media screen and (max-width: 576px) {
   .ant-input {

@@ -95,13 +95,7 @@ const items1TimeLine = [
     ),
     children: (
       <>
-        <Paragraph
-          id={styles.timelineContext}
-          ellipsis={{
-            rows: 3,
-            expandable: true,
-            symbol: <RightOutlined className={styles.colorBlue1} />,
-          }}>
+        <Paragraph id={styles.timelineContext}>
           Awarded Services - Based Operator (SBO) Individual License from
           Infocomm Development Authority (IDA) of Singapore. Construct Managed
           VoIP Network between Singapore and Korea. Obtain 1505 CCS IDD Access
@@ -162,13 +156,7 @@ const items2TimeLine = [
     ),
     children: (
       <>
-        <Paragraph
-          id={styles.timelineContext}
-          ellipsis={{
-            rows: 3,
-            expandable: true,
-            symbol: <RightOutlined className={styles.colorBlue1} />,
-          }}>
+        <Paragraph id={styles.timelineContext}>
           CS Mobile Dialer Launch <br /> CCS Mobile & CB-Roaming Services Launch
           Obtain <br /> (MVNO) Mobile Virtual Network Operator <br /> license
           from IDA Reselling Mobile services <br />
@@ -216,13 +204,7 @@ const items3TimeLine = [
     ),
     children: (
       <>
-        <Paragraph
-          id={styles.timelineContext}
-          ellipsis={{
-            rows: 3,
-            expandable: true,
-            symbol: <RightOutlined className={styles.colorBlue1} />,
-          }}>
+        <Paragraph id={styles.timelineContext}>
           Incorporated subsidiary office at Ho Chi Minh City, Vietnam
         </Paragraph>
       </>
@@ -467,7 +449,7 @@ const TimeLineProfile = () => {
           draggable
           pauseOnDotsHover={true}
           pauseOnHover={true}
-          autoplay
+          // autoplay
           autoplaySpeed={3000}>
           <div className='h-auto'>
             <Timeline mode='alternate' items={items1TimeLine} />
