@@ -57,7 +57,7 @@ const FormContact = ({ handleFunction }: any) => {
               message: "Please enter a message",
             },
           ]}>
-          <Input.TextArea maxLength={200} rows={5} size='middle' />
+          <Input.TextArea maxLength={200} rows={3} size='middle' />
         </Form.Item>
         <Form.Item>
           <div className='md:flex md:items-center'>

@@ -50,7 +50,7 @@ const Header: React.FC = () => {
     <>
       <header>
         <Row gutter={0} align={"middle"}>
-          <Col span={12}>
+          <Col span={8}>
             <Link href={"/"}>
               <Image
                 id={styles.headerLogoImg}
@@ -61,10 +61,10 @@ const Header: React.FC = () => {
               />
             </Link>
           </Col>
-          <Col xs={0} sm={0} md={12}>
+          <Col xs={0} sm={0} md={16}>
             <Navbar />
           </Col>
-          <Col xs={12} sm={12} md={0}>
+          <Col xs={16} sm={16} md={0}>
             <MenuOutlined
               id={styles.headerCollapseBtn}
               onClick={() => {

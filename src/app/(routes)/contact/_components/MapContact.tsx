@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Col, Row } from "antd";
 import styles from "../../../index.module.scss";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+
 const optionSelectMap = [
   {
     id: "1",
@@ -66,9 +67,9 @@ const MapContact = () => {
     <>
       <GoogleMapsEmbed
         apiKey={mapKey}
-        height={350}
         allowfullscreen
         zoom='15'
+        height={250}
         width='100%'
         loading='lazy'
         mode='place'

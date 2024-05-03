@@ -62,11 +62,11 @@ $spacing-50: 3.125rem; //50px
   }
   @media screen and (min-width: 768px) {
     font-size: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   @media screen and (min-width: 1536px) {
     font-size: 50px;
@@ -1070,18 +1070,12 @@ $spacing-50: 3.125rem; //50px
     }
   }
   #contactMap {
-    #contactGoogleMap {
-      height: 300px;
-      @media (max-width: 430px) {
-        height: 200px;
-      }
-    }
     #contactLocation {
       #itemContactLocation {
         cursor: pointer;
         h1 {
           clear: both;
-          margin: 20px 0 !important;
+          margin: 20px 0;
           font-size: 24px;
           font-weight: 700;
           color: $color-blue1;
@@ -1119,9 +1113,10 @@ $spacing-50: 3.125rem; //50px
         @media screen and (min-width: 1280px) {
           h1 {
             font-size: 24px;
+            margin: 15px 0 10px 0;
           }
           p {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         @media screen and (min-width: 1536px) {
@@ -1148,13 +1143,13 @@ $spacing-50: 3.125rem; //50px
     }
   }
   @media screen and (min-width: 360px) {
-    margin: 120px 0;
+    margin: $spacing-100 0;
   }
   @media screen and (min-width: 768px) {
-    margin: 10rem 0;
+    margin: 8rem 0;
   }
   @media screen and (min-width: 1280px) {
-    margin: 10rem 0;
+    margin: 7rem 0;
   }
   @media screen and (min-width: 1536px) {
     margin: 12rem 0;

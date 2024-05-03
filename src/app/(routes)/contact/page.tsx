@@ -78,7 +78,7 @@ const ContactPage = () => {
             <Title level={1} id={styles.title}>
               CONTACT
             </Title>
-            <Row gutter={30} align={"middle"}>
+            <Row gutter={20} align={"top"}>
               <Col xs={24} sm={24} md={24} lg={12} id={styles.contactForm}>
                 <FormContact handleFunction={handleSendMail} />
               </Col>

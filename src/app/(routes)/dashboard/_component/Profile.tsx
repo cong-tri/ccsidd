@@ -449,7 +449,7 @@ const TimeLineProfile = () => {
           draggable
           pauseOnDotsHover={true}
           pauseOnHover={true}
-          // autoplay
+          autoplay
           autoplaySpeed={3000}>
           <div className='h-auto'>
             <Timeline mode='alternate' items={items1TimeLine} />
