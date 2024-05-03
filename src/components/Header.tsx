@@ -11,6 +11,14 @@ import styles from "../app/index.module.scss";
 const items: MenuProps["items"] = [
   {
     label: (
+      <Link href={"/"} className={styles.colorBlue2}>
+        Home
+      </Link>
+    ),
+    key: "home",
+  },
+  {
+    label: (
       <Link href={"/services"} className={styles.colorBlue2}>
         Services
       </Link>

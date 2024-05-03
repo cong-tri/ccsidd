@@ -19,7 +19,6 @@ const Services = () => {
             <Row align={"middle"}>
               <Col xs={0} sm={0} md={24} lg={12} className='mx-auto'>
                 <Image
-                  className='animate__animated animate__fadeInLeft animate__slow animate__delay-1s'
                   src={imageServices}
                   quality={100}
                   alt='MOBILE SERVICE'
@@ -27,14 +26,11 @@ const Services = () => {
                 />
               </Col>
               <Col xs={24} sm={24} md={24} lg={12}>
-                <Title
-                  level={1}
-                  id={styles.serLabel}
-                  className='animate__animated animate__fadeInRight animate__slow animate__delay-2s'>
+                <Title level={1} id={styles.serLabel}>
                   MOBILE SERVICE
                 </Title>
                 <div id={styles.serContent}>
-                  <Paragraph className='hidden md:block animate__animated animate__fadeInRight animate__delay-3s'>
+                  <Paragraph className='hidden md:block'>
                     <p>
                       CCS has attained the{" "}
                       <span className={`${styles.colorBlue1} font-bold`}>
@@ -61,7 +57,7 @@ const Services = () => {
                     </p>
                   </Paragraph>
                   <Paragraph
-                    className='block md:hidden animate__animated animate__fadeInRight animate__delay-3s'
+                    className='block md:hidden'
                     ellipsis={{
                       rows: 16,
                       expandable: true,
@@ -95,7 +91,7 @@ const Services = () => {
                 </div>
               </Col>
             </Row>
-            <div className='text-right animate__animated animate__fadeInRight animate__slow animate__delay-4s'>
+            <div className='text-right'>
               <button className='transition duration-300 ease-in-out hover:translate-y-2'>
                 <Link href={"/services"} id={styles.serBtnViewMore}>
                   View More Services

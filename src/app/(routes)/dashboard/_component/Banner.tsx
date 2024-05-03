@@ -8,17 +8,17 @@ const Banner = () => {
       <section id={styles.banner}>
         <div className='container flex items-center h-full'>
           <div id={styles.bannerContent}>
-            <h1 className='animate__animated animate__fadeInLeft animate__slow animate__delay-2s'>
+            <h1>
               Connecting <br /> Communication & <br /> Solutions
             </h1>
-            <p className='animate__animated animate__fadeInLeft animate__delay-3s'>
+            <p>
               Connecting Communication & Solutions Private Limited (CCS) is{" "}
               <br />
               service-based operator that specialized in providing overseas call{" "}
               <br />
               service (voice, fax, and inmarsat) to corporate markets
             </p>
-            <div className='animate__animated animate__fadeInLeft animate__delay-4s'>
+            <div>
               <button className='transition duration-300 ease-in-out hover:-translate-y-2'>
                 <a href='#about'>More About Us</a>
               </button>

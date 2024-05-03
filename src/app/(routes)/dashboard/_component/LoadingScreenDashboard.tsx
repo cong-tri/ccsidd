@@ -11,6 +11,7 @@ const LoadingScreenDashboard = () => {
         loop={true}
         autoPlay={true}
         size={300}
+        height={500}
       />
     </>
   );
