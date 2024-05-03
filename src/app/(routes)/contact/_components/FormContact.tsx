@@ -23,7 +23,7 @@ const FormContact = ({ handleFunction }: any) => {
               message: "Please input your username!",
             },
           ]}>
-          <Input size='middle' />
+          <Input size='small' />
         </Form.Item>
         <Title id={styles.labelForm}>Your Email:</Title>
         <Form.Item
@@ -38,7 +38,7 @@ const FormContact = ({ handleFunction }: any) => {
               message: "Please input the correct email!",
             },
           ]}>
-          <Input size='middle' />
+          <Input size='small' />
         </Form.Item>
         <Title id={styles.labelForm}>What is kind of your contact?</Title>
         <Form.Item name='kind' initialValue={"service@ccsidd.com"}>
@@ -57,7 +57,7 @@ const FormContact = ({ handleFunction }: any) => {
               message: "Please enter a message",
             },
           ]}>
-          <Input.TextArea maxLength={200} rows={3} size='middle' />
+          <Input.TextArea maxLength={200} rows={3} size='small' />
         </Form.Item>
         <Form.Item>
           <div className='md:flex md:items-center'>

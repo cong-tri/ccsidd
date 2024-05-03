@@ -65,10 +65,10 @@ $spacing-50: 3.125rem; //50px
     margin-bottom: 30px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     font-size: 50px;
     margin-bottom: 50px;
   }
@@ -87,26 +87,21 @@ $spacing-50: 3.125rem; //50px
   width: 100%;
   display: block;
   float: right;
-  font-size: 26px;
+  font-size: 24px;
   border: 0 !important;
-  margin: 1rem 1rem 1rem 0;
   @media screen and (min-width: 360px) {
     font-size: 20px;
     text-align: left;
   }
-  @media screen and (min-width: 576px) {
-    font-size: 20px;
-    text-align: left;
-  }
   @media screen and (min-width: 768px) {
-    font-size: 24px;
-    text-align: right;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 26px;
+    font-size: 22px;
     text-align: right;
   }
   @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    text-align: right;
+  }
+  @media screen and (min-width: 1824px) {
     font-size: 26px;
     text-align: right;
   }
@@ -131,19 +126,14 @@ $spacing-50: 3.125rem; //50px
     width: 40px;
   }
   @media screen and (min-width: 768px) {
-    margin: 1rem 0 1rem 1rem;
-    height: 55px;
-    width: 55px;
-  }
-  @media screen and (min-width: 992px) {
-    margin: 1rem 0 1rem 2rem;
-    height: 60px;
-    width: 60px;
+    margin: 10px 0 10px 2rem;
+    height: 45px;
+    width: 45px;
   }
   @media screen and (min-width: 1280px) {
-    margin: 1rem 0 1rem 2rem;
-    height: 65px;
-    width: 65px;
+    margin: 10px 0 10px 2rem;
+    height: 50px;
+    width: 50px;
   }
   @media (max-height: 430px) {
     margin: 8px 0 8px 1rem;
@@ -359,7 +349,7 @@ $spacing-50: 3.125rem; //50px
         padding: 0;
         margin: 30px 0;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         font-size: 24px;
         line-height: 40px;
         padding: 0;
@@ -491,7 +481,15 @@ $spacing-50: 3.125rem; //50px
       margin: 10px 0;
     }
     @media screen and (min-width: 768px) {
+      font-size: 26px;
+      margin: 10px 0;
+    }
+    @media screen and (min-width: 1280px) {
       font-size: 28px;
+      margin: 10px 0;
+    }
+    @media screen and (min-width: 1824px) {
+      font-size: 30px;
       margin: 10px 0;
     }
     @media (min-height: 320px) and (max-height: 440px) {
@@ -520,7 +518,7 @@ $spacing-50: 3.125rem; //50px
         font-size: 20px;
         line-height: 30px;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         font-size: 25px;
         line-height: 35px;
       }
@@ -580,7 +578,7 @@ $spacing-50: 3.125rem; //50px
   @media screen and (min-width: 1280px) {
     margin: $spacing-100 0;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     margin: 10rem 0;
   }
   @media screen and (max-height: 440px) {
@@ -615,7 +613,7 @@ $spacing-50: 3.125rem; //50px
         font-size: 18px;
         text-align: justify;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         font-size: 25px;
         text-align: justify;
       }
@@ -652,7 +650,7 @@ $spacing-50: 3.125rem; //50px
   @media screen and (min-width: 1280px) {
     margin: $spacing-100 0;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     margin: 10rem 0;
   }
   @media screen and (max-height: 440px) {
@@ -675,15 +673,10 @@ $spacing-50: 3.125rem; //50px
         font-size: 24px;
         padding: 0 5px;
       }
-      @media screen and (min-width: 576px) {
-        font-size: 26px;
-        padding: 0 5px;
-      }
       @media screen and (min-width: 768px) {
         padding: 0 20px;
         font-size: 28px;
       }
-
       @media (min-height: 320px) and (max-height: 440px) {
         font-size: 20px;
       }
@@ -710,7 +703,7 @@ $spacing-50: 3.125rem; //50px
         padding: 0 30px;
         font-size: 20px;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         line-height: 35px;
         padding: 0 30px;
         font-size: 25px;
@@ -743,7 +736,7 @@ $spacing-50: 3.125rem; //50px
         display: none;
       }
     }
-    @media screen and (min-width: 1536px) {
+    @media screen and (min-width: 1824px) {
       #timelineCarousel1 {
         display: block;
       }
@@ -761,7 +754,7 @@ $spacing-50: 3.125rem; //50px
   @media screen and (min-width: 1280px) {
     margin: $spacing-100 0;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     margin: 10rem 0;
   }
   @media (min-height: 320px) and (max-height: 440px) {
@@ -794,7 +787,7 @@ $spacing-50: 3.125rem; //50px
         height: $spacing-100;
         width: $spacing-100;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         height: 150px;
         width: 150px;
       }
@@ -821,7 +814,7 @@ $spacing-50: 3.125rem; //50px
         font-size: 30px;
         margin: 30px 0;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         font-size: 34px;
         margin: 30px 0;
       }
@@ -846,7 +839,7 @@ $spacing-50: 3.125rem; //50px
       @media screen and (min-width: 1280px) {
         font-size: 20px;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         font-size: 25px;
       }
       @media screen and (max-height: 440px) {
@@ -873,7 +866,7 @@ $spacing-50: 3.125rem; //50px
       @media screen and (min-width: 1280px) {
         font-size: 22px;
       }
-      @media screen and (min-width: 1536px) {
+      @media screen and (min-width: 1824px) {
         font-size: 25px;
       }
     }
@@ -888,10 +881,10 @@ $spacing-50: 3.125rem; //50px
     margin: 10rem 0;
   }
   @media screen and (min-width: 1280px) {
-    margin: 10rem 0;
+    margin: $spacing-100 0;
   }
-  @media screen and (min-width: 1536px) {
-    margin: 12rem 0;
+  @media screen and (min-width: 1824px) {
+    margin: 10rem 0;
   }
   @media (min-height: 320px) and (max-height: 440px) {
     margin: $spacing-50 0;
@@ -910,13 +903,13 @@ $spacing-50: 3.125rem; //50px
   }
   @media screen and (min-width: 768px) {
     font-size: 28px;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 32px;
-    padding: 2rem;
+    font-size: 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     font-size: 35px;
     padding: 2rem;
   }
@@ -931,13 +924,13 @@ $spacing-50: 3.125rem; //50px
   }
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
   @media screen and (min-width: 1280px) {
     font-size: 20px;
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     font-size: 25px;
     padding: 2rem;
   }
@@ -966,7 +959,7 @@ $spacing-50: 3.125rem; //50px
       padding: 0;
       font-size: 16px;
     }
-    @media screen and (min-width: 1536px) {
+    @media screen and (min-width: 1824px) {
       padding: 0;
       font-size: 20px;
       line-height: 40px;
@@ -1000,9 +993,9 @@ $spacing-50: 3.125rem; //50px
     #resourceTabMobile {
       display: none;
     }
-    margin: 10rem 0;
+    margin: $spacing-100 0;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 1824px) {
     #resourceTabDesktop {
       display: block;
     }
@@ -1041,7 +1034,7 @@ $spacing-50: 3.125rem; //50px
         background-color: $color-blue1;
       }
     }
-    @media screen and (max-width: 576px) {
+    @media screen and (min-width: 360px) {
       #labelForm {
         font-size: 18px;
       }
@@ -1053,11 +1046,22 @@ $spacing-50: 3.125rem; //50px
     }
     @media screen and (min-width: 768px) {
       #labelForm {
-        font-size: 22px;
+        font-size: 20px;
+      }
+      #btnForm {
+        padding: 8px 20px;
+        font-size: 20px;
+        margin-top: 0;
+      }
+    }
+    @media screen and (min-width: 1824px) {
+      #labelForm {
+        font-size: 25px;
       }
       #btnForm {
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
+        margin-top: 0;
       }
     }
     @media screen and (max-height: 440px) {
@@ -1076,7 +1080,7 @@ $spacing-50: 3.125rem; //50px
         h1 {
           clear: both;
           margin: 20px 0;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 700;
           color: $color-blue1;
           letter-spacing: 0.28px;
@@ -1112,14 +1116,14 @@ $spacing-50: 3.125rem; //50px
         }
         @media screen and (min-width: 1280px) {
           h1 {
-            font-size: 24px;
-            margin: 15px 0 10px 0;
+            font-size: 20px;
+            margin: 10px 0 10px 0;
           }
           p {
             font-size: 16px;
           }
         }
-        @media screen and (min-width: 1536px) {
+        @media screen and (min-width: 1824px) {
           h1 {
             font-size: 26px;
           }
@@ -1149,10 +1153,10 @@ $spacing-50: 3.125rem; //50px
     margin: 8rem 0;
   }
   @media screen and (min-width: 1280px) {
-    margin: 7rem 0;
+    margin: 9rem 0 3rem 0;
   }
-  @media screen and (min-width: 1536px) {
-    margin: 12rem 0;
+  @media screen and (min-width: 1824px) {
+    margin: 12rem 0 0 0;
   }
 }
 // --------- end contact page ----------

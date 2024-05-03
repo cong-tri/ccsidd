@@ -148,64 +148,59 @@ const ServicesPage = () => {
   };
   return (
     <>
-      <section id='services'>
-        <Row align={"middle"} id={styles.services}>
-          <Col span={24}>
-            <div className='container'>
-              <Title id={styles.title}>Services</Title>
-              <Row
-                align={"middle"}
-                justify={"center"}
-                gutter={{ xs: 20, sm: 24, md: 30, lg: 30, xxl: 40 }}>
-                {listServices.map((item, index) => {
-                  return (
-                    <>
-                      <Col
-                        xs={24}
-                        sm={24}
-                        md={24}
-                        lg={12}
-                        xl={12}
-                        xxl={12}
-                        id={styles.serItems}
-                        key={index + 1}>
-                        <Image
-                          src={item.serImage}
-                          quality={100}
-                          id={styles.serItemsImage}
-                          alt={item.serName}
-                        />
-                        <Title level={1} id={styles.serItemsLabel}>
-                          {item.serName}
-                        </Title>
-                        <Paragraph
-                          id={styles.serItemsContent}
-                          key={item.id}
-                          ellipsis={{
-                            rows: 5,
-                          }}>
-                          {item.serDesc}
-                        </Paragraph>
-                        <div className='text-right'>
-                          <button
-                            id={styles.serItemsBtnSeeMore}
-                            className={`${styles.colorChanging}`}
-                            onClick={() => {
-                              setOpen(true);
-                              setData(item);
-                            }}>
-                            <i>see more</i>
-                          </button>
-                        </div>
-                      </Col>
-                    </>
-                  );
-                })}
-              </Row>
-            </div>
-            <ModalService data={data} />
-          </Col>
-        </Row>
+      <section id={styles.services}>
+        <div className='container'>
+          <Row
+            align={"middle"}
+            justify={"center"}
+            gutter={{ xs: 20, sm: 24, md: 30, lg: 30, xxl: 40 }}>
+            {listServices.map((item, index) => {
+              return (
+                <>
+                  <Col
+                    xs={24}
+                    sm={24}
+                    md={24}
+                    lg={12}
+                    xl={12}
+                    xxl={12}
+                    id={styles.serItems}
+                    key={index + 1}>
+                    <Image
+                      src={item.serImage}
+                      quality={100}
+                      id={styles.serItemsImage}
+                      alt={item.serName}
+                    />
+                    <Title level={1} id={styles.serItemsLabel}>
+                      {item.serName}
+                    </Title>
+                    <Paragraph
+                      id={styles.serItemsContent}
+                      key={item.id}
+                      ellipsis={{
+                        rows: 5,
+                      }}>
+                      {item.serDesc}
+                    </Paragraph>
+                    <div className='text-right'>
+                      <button
+                        id={styles.serItemsBtnSeeMore}
+                        className={`${styles.colorChanging}`}
+                        onClick={() => {
+                          setOpen(true);
+                          setData(item);
+                        }}>
+                        <i>see more</i>
+                      </button>
+                    </div>
+                  </Col>
+                </>
+              );
+            })}
+          </Row>
+        </div>
+        <ModalService data={data} />
       </section>
     </>
   );

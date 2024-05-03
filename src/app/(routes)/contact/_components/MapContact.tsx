@@ -45,19 +45,16 @@ const optionSelectMap = [
 const mapKey = process.env.MAP_KEY as string;
 const MapContact = () => {
   const [center, setCenter] = useState("1.335288, 103.904813");
-  const [region, setRegion] = useState("SG");
   const [q, setQ] = useState("place_id:ChIJhf3MzfoX2jERizLLab4oJYk");
   const handleSelectLocation = (location: any) => {
     switch (location) {
       case "SINGAPORE":
         setCenter("1.335288, 103.904813");
         setQ("place_id:ChIJhf3MzfoX2jERizLLab4oJYk");
-        setRegion("SG");
         break;
       case "VIETNAM":
         setCenter("10.809316523310306, 106.66542228466048");
         setQ("place_id:ChIJYWdMOiMpdTERhvWxg32LRRA");
-        setRegion("VN");
         break;
       default:
         break;
@@ -75,9 +72,7 @@ const MapContact = () => {
         loading='lazy'
         mode='place'
         q={q}
-        maptype='roadmap'
         center={center}
-        region={region}
       />
       <Row id={styles.contactLocation}>
         {optionSelectMap.map((item) => {

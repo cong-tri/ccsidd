@@ -86,7 +86,7 @@ header {
 .ant-tabs .ant-tabs-tab {
   background: transparent !important;
   border: 1px solid #1565c0 !important;
-  padding: 1rem 10px !important;
+  padding: 10px !important;
   border-radius: 0 !important;
   font-size: 16px !important;
   text-align: center;
@@ -108,14 +108,15 @@ header {
 
 .ant-input {
   color: #00acc1 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
+  padding: 0 5px !important;
 }
 .ant-input-outlined {
   border: 4px solid #1565c0 !important;
   border-radius: 10px !important;
 }
 .ant-select-selector {
-  font-size: 18px !important;
+  font-size: 16px !important;
   color: #00acc1 !important;
   border: 4px solid #1565c0 !important;
   border-radius: 10px !important;
@@ -158,10 +159,10 @@ header {
     padding: 0;
   }
 }
-@media screen and (min-width: 1536px) {
+@media screen and (min-width: 1280px) {
   .ant-collapse-header {
     padding: 1rem !important;
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
   .ant-collapse-content-box {
     padding: 0;
