@@ -1,19 +1,28 @@
 /** @format */
 "use client";
 import React from "react";
-import { Form, Input, Select } from "antd";
+import { useFormState } from "react-dom";
+import { handleSendMail } from "../actions";
+import { Form, Input, Select, message } from "antd";
 import Title from "antd/es/typography/Title";
 import ReCAPTCHA from "react-google-recaptcha";
 import styles from "../../../index.module.scss";
 const { Option } = Select;
-const siteKey = process.env.RECAPTCHA_SITE_KEY as string;
-const FormContact = ({ handleFunction }: any) => {
+
+const siteKey = process.env.SITE_KEY as string;
+
+const FormContact = () => {
+  const [state, formAction] = useFormState(handleSendMail, { message: "" });
   const handleOnchangeCaptcha = (value: any) => {
     console.log(value);
   };
+  if (state.message != "") {
+    message.success(state.message);
+  }
+
   return (
     <>
-      <Form name='contactForm' onFinish={handleFunction} autoComplete='off'>
+      <Form name='contactForm' onFinish={formAction} autoComplete='off'>
         <Title id={styles.labelForm}>Your Name:</Title>
         <Form.Item
           name='username'
@@ -60,7 +69,7 @@ const FormContact = ({ handleFunction }: any) => {
           <Input.TextArea maxLength={200} rows={3} size='small' />
         </Form.Item>
         <Form.Item>
-          <div className='md:flex md:items-center'>
+          <div className='xl:flex xl:items-center'>
             <ReCAPTCHA
               size='normal'
               sitekey={siteKey}

@@ -19,15 +19,13 @@ const nextConfig = {
     ],
   },
   env: {
-    MAP_KEY: "AIzaSyCrqcQjQzZriX_nVK2ZA-EXKp67inaIvHU",
-    RECAPTCHA_SITE_KEY: "6LdXacYpAAAAAIlZrhLIuktKCwq-s2IVQVuM9-qJ",
-    MAIL_HOST: "mail.ccsidd.com",
-    MAIL_PORT: "465",
-    SENDER_MAIL: "tri.daocong@ccsidd.com",
-    SENDER_AUTH_USER: "tri.daocong@ccsidd.com",
-    SENDER_AUTH_PASS: "Daocongtri@1609",
-    // RECAPTCHA_URL: "https://www.google.com/recaptcha/api/siteverify",
-    // GOOGLE_MAP_API_KEY: "AIzaSyBCLo3VQn1OM3j9dm8CIxzNQWcYNdQ5qIc",
+    MAP_KEY: process.env.APIS_MAP_KEY,
+    SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+    MAIL_HOST: process.env.SERVER_MAIL_HOST,
+    MAIL_PORT: process.env.SERVER_MAIL_PORT,
+    SENDER: process.env.SENDER_MAIL,
+    AUTH_USER: process.env.SENDER_AUTH_USER,
+    AUTH_PASS: process.env.SENDER_AUTH_PASS,
   },
 };
 

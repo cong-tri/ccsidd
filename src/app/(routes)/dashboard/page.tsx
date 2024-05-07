@@ -6,7 +6,7 @@ import About from "./_component/About";
 import Profile from "./_component/Profile";
 import Banner from "./_component/Banner";
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
     <>
       <Banner />

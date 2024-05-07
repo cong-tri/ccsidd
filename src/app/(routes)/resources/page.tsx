@@ -1,11 +1,10 @@
 /** @format */
 
 import React from "react";
-import { Col, Row } from "antd";
 import TabCollapse from "./_components/TabCollapse";
 import styles from "../../index.module.scss";
 
-const Resources = () => {
+const Resources = async () => {
   return (
     <>
       <section id={styles.resources}>

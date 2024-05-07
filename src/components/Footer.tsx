@@ -17,7 +17,7 @@ const Footer = () => {
               alt='Logo Compony'
             />
             <div id={styles.footerCompanyName}>
-              Connecting <br /> Communication &<br /> Solutions
+              Connecting Communication & Solutions
             </div>
           </Link>
           <div id={styles.footerLink}>

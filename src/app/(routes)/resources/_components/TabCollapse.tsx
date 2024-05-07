@@ -592,7 +592,7 @@ const contentDowload = [
   {
     key: "1",
     label: "CS Mobile Terms and Conditions",
-    dowloadForm: "/assets/download/CCS_IDD_New_Registration.pdf",
+    dowloadForm: "/assets/download/CCS_Mobile_Terms_and_Conditions.pdf",
   },
   {
     key: "2",
@@ -603,8 +603,7 @@ const contentDowload = [
   {
     key: "3",
     label: "CCS Rateplan",
-    dowloadForm:
-      "/assets/download/CCS_Letterhead_ICF_Notification_01112017.pdf",
+    dowloadForm: "/assets/download/CCS_Rateplan.pdf",
   },
   {
     key: "4",
@@ -614,7 +613,7 @@ const contentDowload = [
   {
     key: "5",
     label: "Equipment Service Plan Undertaking",
-    dowloadForm: "/assets/download/CCS_Service_Agreement.pdf",
+    dowloadForm: "/assets/download/Equipment_Service_Plan_Undertaking.pdf",
   },
   {
     key: "6",
@@ -749,7 +748,7 @@ const TabCollapse = () => {
                     <Link
                       href={items.dowloadForm}
                       className={`${styles.colorChanging} text-lg ml-6 border-0 bg-transparent`}
-                      // download={"file"}
+                      // download
                       target='_blank'
                       rel='noopener noreferrer'>
                       <i>dowload</i>
