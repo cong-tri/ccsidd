@@ -6,16 +6,12 @@ import Link from "next/link";
 import { Col, Modal, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
-import imageServices1 from "../../../../public/images/service/ser-item-2.png";
-import imageServices2 from "../../../../public/images/service/ser-item-5.png";
-import imageServices3 from "../../../../public/images/service/ser-item-6.png";
-import imageServices4 from "../../../../public/images/service/ser-item-1.png";
 import styles from "../../index.module.scss";
 const listServices = [
   {
     id: 1,
     serName: "MOBILE SERVICE",
-    serImage: imageServices1,
+    serImage: "/images/service/ser-item-2.png",
     serDesc: (
       <>
         <p>
@@ -42,7 +38,7 @@ const listServices = [
   {
     id: 2,
     serName: "RTONE SERVICE",
-    serImage: imageServices2,
+    serImage: "/images/service/ser-item-5.png",
     serDesc: (
       <>
         <p>
@@ -65,7 +61,7 @@ const listServices = [
   {
     id: 3,
     serName: "CCS IINTERNATIONAL CALL FORWARDING (ICF)",
-    serImage: imageServices3,
+    serImage: "/images/service/ser-item-6.png",
     serDesc: (
       <>
         <p>
@@ -93,7 +89,7 @@ const listServices = [
   {
     id: 4,
     serName: "1505 PREMIUM CONNECT",
-    serImage: imageServices4,
+    serImage: "/images/service/ser-item-1.png",
     serDesc: (
       <>
         <p>

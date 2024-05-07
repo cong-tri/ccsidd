@@ -2,13 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Col, Row } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
-import imageServices from "../../../../../public/images/service/ser-item-2.png";
 import styles from "../../../index.module.scss";
-import Link from "next/link";
 const Services = () => {
   return (
     <>
@@ -19,7 +18,9 @@ const Services = () => {
             <Row align={"middle"}>
               <Col xs={0} sm={0} md={24} lg={12} className='mx-auto'>
                 <Image
-                  src={imageServices}
+                  src={"/images/service/ser-item-2.png"}
+                  width={100}
+                  height={100}
                   quality={100}
                   alt='MOBILE SERVICE'
                   id={styles.serImage}

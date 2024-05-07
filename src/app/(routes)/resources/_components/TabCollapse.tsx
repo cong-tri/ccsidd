@@ -1,12 +1,14 @@
 /** @format */
 
 import React from "react";
+import Link from "next/link";
 import { Col, Collapse, CollapseProps, Row, Tabs, TabsProps } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
 import {
   ArrowRightOutlined,
   AudioOutlined,
+  DoubleRightOutlined,
   DownloadOutlined,
   LinkOutlined,
   MobileOutlined,
@@ -590,246 +592,291 @@ const contentDowload = [
   {
     key: "1",
     label: "CS Mobile Terms and Conditions",
-    dowloadForm:
-      "https://ccsidd.com/download/CCS_Mobile_Terms_and_Conditions.pdf",
+    dowloadForm: "/assets/download/CCS_IDD_New_Registration.pdf",
   },
   {
     key: "2",
     label: "CCS International Call Forwarding (ICF) Service",
     dowloadForm:
-      "https://ccsidd.com/download/CCS_Letterhead_ICF_Notification_01112017.pdf",
+      "/assets/download/CCS_Letterhead_ICF_Notification_01112017.pdf",
   },
   {
     key: "3",
     label: "CCS Rateplan",
     dowloadForm:
-      "https://ccsidd.com/download/CCS_Letterhead_ICF_Notification_01112017.pdf",
+      "/assets/download/CCS_Letterhead_ICF_Notification_01112017.pdf",
   },
   {
     key: "4",
     label: "CCS Service Agreement",
-    dowloadForm: "https://ccsidd.com/download/CCS_Service_Agreement.pdf",
+    dowloadForm: "/assets/download/CCS_Service_Agreement.pdf",
   },
   {
     key: "5",
     label: "Equipment Service Plan Undertaking",
-    dowloadForm: "https://ccsidd.com/download/CCS_Service_Agreement.pdf",
+    dowloadForm: "/assets/download/CCS_Service_Agreement.pdf",
   },
   {
     key: "6",
     label: "FAQ on R Tone",
-    dowloadForm: "https://ccsidd.com/download/FAQ_on_R_Tone.pdf",
+    dowloadForm: "/assets/download/FAQ_on_R_Tone.pdf",
   },
   {
     key: "7",
     label: "R Tone additoinal agreement",
-    dowloadForm: "https://ccsidd.com/download/R_Tone_additoinal_agreement.pdf",
+    dowloadForm: "/assets/download/R_Tone_additoinal_agreement.pdf",
   },
   {
     key: "8",
     label: "CCS IDD New Registration",
-    dowloadForm: "https://ccsidd.com/download/CCS_IDD_New_Registration.pdf",
+    dowloadForm: "/assets/download/CCS_IDD_New_Registration.pdf",
   },
   {
     key: "9",
     label: "CCS Mobile Registration Form",
-    dowloadForm: "https://ccsidd.com/download/CCS_Mobile_Registration_Form.pdf",
+    dowloadForm: "/assets/download/CCS_Mobile_Registration_Form.pdf",
   },
   {
     key: "10",
     label: "Data Passport 75 Countries Coverage",
-    dowloadForm:
-      "https://ccsidd.com/download/Data_Passport_75_Countries_Coverage.pdf",
+    dowloadForm: "/assets/download/Data_Passport_75_Countries_Coverage.pdf",
   },
   {
     key: "11",
     label: "Transfer Fee Notice",
-    dowloadForm: "https://ccsidd.com/download/Transfer_Fee_Notice.pdf",
+    dowloadForm: "/assets/download/Transfer_Fee_Notice.pdf",
   },
 ];
-const itemResourcesTab: TabsProps["items"] = [
-  {
-    key: "1",
-    label: "1505 PREMIUM CONNECT 15050 VQ CONNECT",
-    children: (
-      <>
-        <Collapse
-          items={contentPremiumConnect}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "2",
-    label: "MOBILE SERVICE",
-    children: (
-      <>
-        <Collapse
-          items={contentMobileService}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "3",
-    label: "CALL BACK SERVICE",
-    children: (
-      <>
-        <Collapse
-          items={contentCallBack}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "4",
-    label: "CALL FORWARDING SERVICE",
-    children: (
-      <>
-        <Collapse
-          items={contentCallForward}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "5",
-    label: "R TONE SERVICE",
-    children: (
-      <>
-        <Collapse
-          items={contentRTONE}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "6",
-    label: "DEFINITIONS",
-    children: (
-      <>
-        <Collapse
-          items={contentDefinitions}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "7",
-    label: "DOWLOAD",
-    children: "7",
-  },
-];
-const itemResourcesTab1: TabsProps["items"] = [
-  {
-    key: "1",
-    label: <LinkOutlined />,
-    children: (
-      <>
-        <Collapse
-          items={contentPremiumConnect}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "2",
-    label: <MobileOutlined />,
-    children: (
-      <>
-        <Collapse
-          items={contentMobileService}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "3",
-    label: <PhoneOutlined />,
-    children: (
-      <>
-        <Collapse
-          items={contentCallBack}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "4",
-    label: <PhoneOutlined />,
-    children: (
-      <>
-        <Collapse
-          items={contentCallForward}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "5",
-    label: <AudioOutlined />,
-    children: (
-      <>
-        <Collapse
-          items={contentRTONE}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "6",
-    label: <ReadOutlined />,
-    children: (
-      <>
-        <Collapse
-          items={contentDefinitions}
-          defaultActiveKey={["1"]}
-          expandIconPosition='end'
-          ghost
-        />
-      </>
-    ),
-  },
-  {
-    key: "7",
-    label: <DownloadOutlined />,
-    children: "7",
-  },
-];
+
 const TabCollapse = () => {
+  const itemResourcesTab: TabsProps["items"] = [
+    {
+      key: "1",
+      label: "1505 PREMIUM CONNECT 15050 VQ CONNECT",
+      children: (
+        <>
+          <Collapse
+            items={contentPremiumConnect}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "2",
+      label: "MOBILE SERVICE",
+      children: (
+        <>
+          <Collapse
+            items={contentMobileService}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "3",
+      label: "CALL BACK SERVICE",
+      children: (
+        <>
+          <Collapse
+            items={contentCallBack}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "4",
+      label: "CALL FORWARDING SERVICE",
+      children: (
+        <>
+          <Collapse
+            items={contentCallForward}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "5",
+      label: "R TONE SERVICE",
+      children: (
+        <>
+          <Collapse
+            items={contentRTONE}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "6",
+      label: "DEFINITIONS",
+      children: (
+        <>
+          <Collapse
+            items={contentDefinitions}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "7",
+      label: "DOWLOAD",
+      children: (
+        <>
+          <Row gutter={20} align={"middle"} className='mt-4'>
+            {contentDowload.map((items) => {
+              return (
+                <Col span={12} key={items.key} className='mb-8'>
+                  <Title level={4} className={`${styles.colorBlue1}`}>
+                    <DoubleRightOutlined />{" "}
+                    <span className='ml-4'>{items.label}</span>
+                    <Link
+                      href={items.dowloadForm}
+                      className={`${styles.colorChanging} text-lg ml-6 border-0 bg-transparent`}
+                      // download={"file"}
+                      target='_blank'
+                      rel='noopener noreferrer'>
+                      <i>dowload</i>
+                    </Link>
+                  </Title>
+                </Col>
+              );
+            })}
+          </Row>
+        </>
+      ),
+    },
+  ];
+  const itemResourcesTab1: TabsProps["items"] = [
+    {
+      key: "1",
+      label: <LinkOutlined />,
+      children: (
+        <>
+          <Collapse
+            items={contentPremiumConnect}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "2",
+      label: <MobileOutlined />,
+      children: (
+        <>
+          <Collapse
+            items={contentMobileService}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "3",
+      label: <PhoneOutlined />,
+      children: (
+        <>
+          <Collapse
+            items={contentCallBack}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "4",
+      label: <PhoneOutlined />,
+      children: (
+        <>
+          <Collapse
+            items={contentCallForward}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "5",
+      label: <AudioOutlined />,
+      children: (
+        <>
+          <Collapse
+            items={contentRTONE}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "6",
+      label: <ReadOutlined />,
+      children: (
+        <>
+          <Collapse
+            items={contentDefinitions}
+            defaultActiveKey={["1"]}
+            expandIconPosition='end'
+            ghost
+          />
+        </>
+      ),
+    },
+    {
+      key: "7",
+      label: <DownloadOutlined />,
+      children: (
+        <>
+          {contentDowload.map((items) => {
+            return (
+              <div key={items.key} className='mb-6'>
+                <Title level={5} className={`${styles.colorBlue1}`}>
+                  <span>
+                    <DoubleRightOutlined />
+                  </span>
+                  <span className='ml-4 w-full'>{items.label}</span>
+                  <Link
+                    href={items.dowloadForm}
+                    className={`${styles.colorChanging} text-base ml-4`}
+                    download={"file"}
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    <i>dowload</i>
+                  </Link>
+                </Title>
+              </div>
+            );
+          })}
+        </>
+      ),
+    },
+  ];
   return (
     <>
       <Tabs
