@@ -7,7 +7,7 @@
 import nodemailer from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
 
-export async function handleSendMail(values: any, formData: FormData) {
+export async function handleSendMail(prevState: string, formData: any): Promise < any | string | undefined> {  
   if (formData) {
     try {
       const transporter = nodemailer.createTransport({
@@ -40,12 +40,10 @@ export async function handleSendMail(values: any, formData: FormData) {
         }
       });
       transporter.close();
+      return "Successfully Send Contact To CCSIDD"
     } catch (error) {
       console.log(error);
+      return "Unsuccessfully"
     }
   }
-
-  return {
-    message: "Successfully Sent Contact To CCSIDD",
-  };
 }

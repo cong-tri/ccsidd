@@ -11,20 +11,23 @@ const { Option } = Select;
 
 const siteKey = process.env.SITE_KEY as string;
 
-const FormContact: React.FC = () => {
-  const [state, formAction] = useFormState(handleSendMail, { message: "" });
+const FormContact = () => {
+  const [form] = Form.useForm();
+  const [state, formAction] = useFormState(handleSendMail, "");
   const handleOnchangeCaptcha = (value: any) => {
     console.log(value);
   };
-  if (state.message != "") {
-    message.success(state.message);
-  } else {
-    message.error("Unsuccessfully Send Contact Mail");
+  if (state != "") {
+    message.success(state);
   }
 
   return (
     <>
-      <Form name='contactForm' onFinish={formAction} autoComplete='off'>
+      <Form
+        name='contactForm'
+        form={form}
+        onFinish={formAction}
+        autoComplete='off'>
         <Title id={styles.labelForm}>Your Name:</Title>
         <Form.Item
           name='username'
