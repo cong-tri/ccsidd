@@ -42,8 +42,8 @@ const optionSelectMap = [
     ),
   },
 ];
-const mapKey = process.env.MAP_KEY as string;
 const MapContact = () => {
+  const mapKey = process.env.MAP_KEY as string;
   const [center, setCenter] = useState("1.335288, 103.904813");
   const [q, setQ] = useState("place_id:ChIJhf3MzfoX2jERizLLab4oJYk");
   const handleSelectLocation = (location: any) => {

@@ -9,9 +9,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import styles from "../../../index.module.scss";
 const { Option } = Select;
 
-const siteKey = process.env.SITE_KEY as string;
-
 const FormContact = () => {
+  const siteKey = process.env.SITE_KEY as string;
   const [form] = Form.useForm();
   const [state, formAction] = useFormState(handleSendMail, "");
   const handleOnchangeCaptcha = (value: any) => {
