@@ -2,32 +2,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/images/logo.png";
-import styles from "../app/index.module.scss";
 
+import styleComponent from "./css/footer.module.scss";
+import styles from "../app/index.module.scss";
 const Footer = () => {
   return (
     <>
-      <footer id={styles.footerNav}>
-        <div id={styles.footerContent}>
-          <Link href={"/"} id={styles.footerLogoLink}>
+      <footer id={styleComponent.footerNav}>
+        <div id={styleComponent.footerContent}>
+          <Link href={"/"} id={styleComponent.footerLogoLink}>
             <Image
-              id={styles.footerLogo}
+              id={styleComponent.footerLogo}
               src={logo}
               quality={100}
               alt='Logo Compony'
             />
-            <div id={styles.footerCompanyName}>
+            <div
+              id={styleComponent.footerCompanyName}
+              className={styles.colorBlue1}>
               Connecting Communication & Solutions
             </div>
           </Link>
-          <div id={styles.footerLink}>
-            <Link href={"/"}>Home</Link>
-            <Link href={"/services"}>Services</Link>
-            <Link href={"/resources"}>Resources</Link>
-            <Link href={"/contact"}>Contact</Link>
+          <div id={styleComponent.footerLink}>
+            <Link className={styles.colorBlue2} href={"/"}>
+              Home
+            </Link>
+            <Link className={styles.colorBlue2} href={"/services"}>
+              Services
+            </Link>
+            <Link className={styles.colorBlue2} href={"/resources"}>
+              Resources
+            </Link>
+            <Link className={styles.colorBlue2} href={"/contact"}>
+              Contact
+            </Link>
           </div>
         </div>
-        <div id={styles.footerCopyRight}>
+        <div id={styleComponent.footerCopyRight} className={styles.colorBlue1}>
           Copyright &copy; 2015 CCS. All right reserved |<br /> Privacy |
           Disclaimer | RSS
         </div>

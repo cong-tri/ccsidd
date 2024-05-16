@@ -16,8 +16,11 @@ const listServices = [
     serDesc: (
       <>
         <p>
-          CCS has attained the Mobile Virtual Network Operator License (MVNO) in
-          2009, where we provide postpaid mobile plans to our customers.
+          CCS has attained the{" "}
+          <span className={`${styles.colorBlue1}`}>
+            Mobile Virtual Network Operator License (MVNO)
+          </span>{" "}
+          in 2009, where we provide postpaid mobile plans to our customers.
         </p>
         <p>
           CCS had maintained close working relationship with our existing
@@ -80,9 +83,10 @@ const listServices = [
           you will be able to receive the call on your overseas mobile.
         </p>
         <p>
-          In combining both CCS Callback Service and CCS International Call
-          Forward Service, it will bring massive savings to your overall roaming
-          bills.
+          In combining both{" "}
+          <span className={`${styles.colorBlue1}`}>CCS Callback Service</span>{" "}
+          and CCS International Call Forward Service, it will bring massive
+          savings to your overall roaming bills.
         </p>
       </>
     ),
@@ -99,8 +103,15 @@ const listServices = [
         </p>
         <p>
           We are able to provide uncompromising call quality which is comparable
-          to the International Direct Dial (IDD) as offered by Fixed Based
-          Operators (FBO).
+          to the{" "}
+          <span className={`${styles.colorBlue1}`}>
+            International Direct Dial (IDD)
+          </span>{" "}
+          as offered by{" "}
+          <span className={`${styles.colorBlue1}`}>
+            Fixed Based Operators (FBO)
+          </span>{" "}
+          .
         </p>
         <p>
           We have sinced providing a consistent and robust voice network to our

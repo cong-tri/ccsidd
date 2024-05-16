@@ -7,6 +7,7 @@ import { Col, Drawer, Menu, Row } from "antd";
 import type { MenuProps } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import logo from "../../public/images/logo.png";
+import styleComponent from "./css/header.module.scss";
 import styles from "../app/index.module.scss";
 const items: MenuProps["items"] = [
   {
@@ -53,7 +54,7 @@ const Header: React.FC = () => {
           <Col span={8}>
             <Link href={"/"}>
               <Image
-                id={styles.headerLogoImg}
+                id={styleComponent.headerLogoImg}
                 className='cursor-pointer object-contain'
                 src={logo}
                 quality={100}
@@ -66,7 +67,8 @@ const Header: React.FC = () => {
           </Col>
           <Col xs={16} sm={16} md={0}>
             <MenuOutlined
-              id={styles.headerCollapseBtn}
+              className={styles.colorBlue2}
+              id={styleComponent.headerCollapseBtn}
               onClick={() => {
                 setOpenMenu(true);
               }}
@@ -94,7 +96,7 @@ const Navbar = ({ isInline = false }) => {
     <>
       <Menu
         mode={isInline ? "inline" : "horizontal"}
-        id={styles.headerNav}
+        id={styleComponent.headerNav}
         items={items}
       />
     </>

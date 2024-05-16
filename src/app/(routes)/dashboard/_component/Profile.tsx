@@ -1,23 +1,22 @@
 /** @format */
-
-import React from "react";
-import { Carousel, Col, Row, Timeline } from "antd";
+"use client";
+import React, { useEffect, useState } from "react";
+import { Carousel, Timeline } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
 import { RightOutlined } from "@ant-design/icons";
+import styleComponent from "./css/profile.module.scss";
 import styles from "../../../index.module.scss";
+import { profile } from "./(assests)/profile";
+
 const Profile = () => {
   return (
     <>
-      <section id='profile'>
-        <Row align={"middle"} id={styles.profile}>
-          <Col span={24} className='container'>
-            <Title level={1} id={styles.title}>
-              PROFILE
-            </Title>
-            <TimeLineProfile />
-          </Col>
-        </Row>
+      <section id={styleComponent.profile}>
+        <Title level={1} id={styles.title}>
+          PROFILE
+        </Title>
+        <TimeLineProfile />
       </section>
     </>
   );
@@ -28,16 +27,20 @@ export default Profile;
 const items1TimeLine = [
   {
     label: (
-      <Title level={1} id={styles.timelineLabelYear}>
+      <Title
+        level={1}
+        id={styleComponent.timelineLabelYear}
+        className={styles.colorBlue1}>
         1998
       </Title>
     ),
     children: (
       <>
-        <Paragraph id={styles.timelineContext}>
-          Incorporated May 1998 in Singapore <br />
-          ProvPaided Callback Service using in-house <br />
-          Developed traditional Callback
+        <Paragraph
+          id={styleComponent.timelineContext}
+          className={styles.colorBlue1}>
+          Incorporated May 1998 in Singapore Provided Callback Service using
+          in-house Developed traditional Callback.
         </Paragraph>
       </>
     ),
@@ -51,7 +54,7 @@ const items1TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          Designed and developed DBDZ <br /> CallBack Switch using Immix
+          Designed and developed DBDZ CallBack Switch using Immix.
         </Paragraph>
       </>
     ),
@@ -65,9 +68,8 @@ const items1TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          Awarded Service Base <br />
-          OperPaator (SBO) Class License from Infocomm <br />
-          Development Authority of Singapore
+          Awarded Service-Based Operator (SBO) Class License from Infocomm
+          Development Authority of Singapore.
         </Paragraph>
       </>
     ),
@@ -81,8 +83,7 @@ const items1TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          Constructed VPN between
-          <br /> Singapore to Hong Kong and Taiwan
+          Constructed VPN between Singapore to Hong Kong and Taiwan.
         </Paragraph>
       </>
     ),
@@ -115,7 +116,7 @@ const items2TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          CCS 1505 IDD Service launch
+          CCS 1505 IDD Service launch.
         </Paragraph>
       </>
     ),
@@ -143,7 +144,7 @@ const items2TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          CCS CallBack Service Launch <br /> CCS 15050 Budget IDD Service Launch
+          CCS CallBack Service Launch CCS 15050 Budget IDD Service Launch
         </Paragraph>
       </>
     ),
@@ -157,10 +158,9 @@ const items2TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          CS Mobile Dialer Launch <br /> CCS Mobile & CB-Roaming Services Launch
-          Obtain <br /> (MVNO) Mobile Virtual Network Operator <br /> license
-          from IDA Reselling Mobile services <br />
-          Incorporated subsidiary office at Batam, Indonesia
+          CS Mobile Dialer Launch CCS Mobile & CB-Roaming Services Launch Obtain
+          (MVNO) Mobile Virtual Network Operator license from IDA Reselling
+          Mobile services Incorporated subsidiary office at Batam, Indonesia.
         </Paragraph>
       </>
     ),
@@ -205,7 +205,7 @@ const items3TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          Incorporated subsidiary office at Ho Chi Minh City, Vietnam
+          Incorporated subsidiary office at Ho Chi Minh City, Vietnam.
         </Paragraph>
       </>
     ),
@@ -219,8 +219,8 @@ const items3TimeLine = [
     children: (
       <>
         <Paragraph id={styles.timelineContext}>
-          CCS Dial 1505 apps (replace CCS Long Distance Calls apps) <br /> CCS R
-          TonPae Lite apps (replace R-connect apps)
+          CCS Dial 1505 apps (replace CCS Long Distance Calls apps) CCS R Tone
+          Lite apps (replace R-connect apps)
         </Paragraph>
       </>
     ),
@@ -274,8 +274,8 @@ const items4TimeLine = [
           2001
         </Title>
         <Paragraph id={styles.timelineContext}>
-          Awarded Service Base <br />
-          OperPaator (SBO) Class License from Infocomm <br />
+          Awarded Service Base OperPaator (SBO) <br /> Class License from
+          Infocomm <br />
           Development Authority of Singapore
         </Paragraph>
       </>
@@ -440,42 +440,108 @@ const items6TimeLine = [
   },
 ];
 const TimeLineProfile = () => {
+  const useWidth = () => {
+    const [width, setWidth] = useState(0);
+    const handleResize = () => setWidth(window.innerWidth);
+    useEffect(() => {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return width;
+  };
+  var width_screen = useWidth();
+  console.log(width_screen);
+  const chunkArray = (myArray: any, chunk_size: any) => {
+    var index = 0;
+    var arrayLength = myArray.length;
+    var tempArray = [];
+    for (index = 0; index < arrayLength; index += chunk_size) {
+      const myChunk = myArray.slice(index, index + chunk_size);
+      tempArray.push(myChunk);
+    }
+    return tempArray;
+  };
+
+  const contentTimeline = profile.info.map((item: any) => {
+    if (width_screen > 576) {
+      return {
+        label: (
+          <Title
+            level={1}
+            id={styleComponent.timelineLabelYear}
+            className={styles.colorBlue1}>
+            {item.title}
+          </Title>
+        ),
+        children: (
+          <Paragraph
+            id={styleComponent.timelineContext}
+            className={styles.colorBlue1}>
+            {item.description}
+          </Paragraph>
+        ),
+      };
+    } else {
+      return {
+        children: (
+          <>
+            <Title
+              level={1}
+              id={styles.timelineLabelYear}
+              className={styles.colorBlue1}>
+              {item.title}
+            </Title>
+            <Paragraph
+              id={styles.timelineContext}
+              className={styles.colorBlue1}>
+              {item.description}
+            </Paragraph>
+          </>
+        ),
+      };
+    }
+  });
+  const itemsTimeline = chunkArray(contentTimeline, 5);
+  console.log(itemsTimeline);
+
   return (
     <>
-      <div id={styles.timeline}>
+      <div id={styleComponent.timeline}>
         <Carousel
-          id={styles.timelineCarousel1}
+          className='block sm:hidden'
           dots={false}
           draggable
           pauseOnDotsHover={true}
           pauseOnHover={true}
           autoplay
           autoplaySpeed={3000}>
-          <div className='h-auto'>
-            <Timeline mode='alternate' items={items1TimeLine} />
+          <div>
+            <Timeline mode='alternate' items={itemsTimeline[0]} />
           </div>
-          <div className='h-auto'>
-            <Timeline mode='alternate' items={items2TimeLine} />
+          <div>
+            <Timeline mode='alternate' items={itemsTimeline[1]} />
           </div>
-          <div className='h-auto'>
-            <Timeline mode='alternate' items={items3TimeLine} />
+          <div>
+            <Timeline mode='alternate' items={itemsTimeline[2]} />
           </div>
         </Carousel>
         <Carousel
-          id={styles.timelineCarousel2}
+          className='hidden sm:block'
           dots={false}
+          draggable
           pauseOnDotsHover={true}
           pauseOnHover={true}
           autoplay
           autoplaySpeed={3000}>
           <div>
-            <Timeline items={items4TimeLine} />
+            <Timeline items={itemsTimeline[0]} />
           </div>
           <div>
-            <Timeline items={items5TimeLine} />
+            <Timeline items={itemsTimeline[1]} />
           </div>
           <div>
-            <Timeline items={items6TimeLine} />
+            <Timeline items={itemsTimeline[2]} />
           </div>
         </Carousel>
       </div>

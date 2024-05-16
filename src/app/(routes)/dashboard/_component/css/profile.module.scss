@@ -1,0 +1,109 @@
+/** @format */
+
+// --------- start profile component home page -----------
+#profile {
+  height: 100%;
+  #timeline {
+    #timelineLabelYear {
+      //   color: $color-blue1;
+      margin-bottom: 0;
+      font-size: 30px;
+      padding: 0 30px;
+      letter-spacing: 1px;
+      @media screen and (min-width: 360px) {
+        font-size: 24px;
+        padding: 0 5px;
+      }
+      @media screen and (min-width: 768px) {
+        padding: 0 20px;
+        font-size: 28px;
+      }
+      @media screen and (min-width: 1824px) {
+        padding: 0 30px;
+        font-size: 35px;
+      }
+      @media (min-height: 320px) and (max-height: 440px) {
+        font-size: 20px;
+      }
+    }
+    #timelineContext {
+      margin-bottom: 0;
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 30px;
+      padding: 0 30px;
+      @media screen and (min-width: 360px) {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0;
+      }
+      @media screen and (min-width: 768px) {
+        padding: 0 20px;
+        line-height: 26px;
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1280px) {
+        line-height: 30px;
+        padding: 0 30px;
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1824px) {
+        line-height: 35px;
+        padding: 0 30px;
+        font-size: 25px;
+      }
+      @media (min-height: 320px) and (max-height: 440px) {
+        font-size: 16px;
+      }
+    }
+    @media screen and (min-width: 360px) {
+      #timelineCarousel1 {
+        display: none;
+      }
+      #timelineCarousel2 {
+        display: block;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      #timelineCarousel1 {
+        display: block;
+      }
+      #timelineCarousel2 {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      #timelineCarousel1 {
+        display: block;
+      }
+      #timelineCarousel2 {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1824px) {
+      #timelineCarousel1 {
+        display: block;
+      }
+      #timelineCarousel2 {
+        display: none;
+      }
+    }
+  }
+  @media screen and (min-width: 360px) {
+    margin: 6.25rem 0 0 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 8rem 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 6.25rem 0;
+  }
+  @media screen and (min-width: 1824px) {
+    margin: 0;
+  }
+  @media (min-height: 320px) and (max-height: 440px) {
+    margin: 3.125rem 0;
+    height: 100%;
+  }
+}
+// --------- end profile component home page -----------
