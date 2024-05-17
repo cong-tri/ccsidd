@@ -723,6 +723,7 @@ module.exports = {
       lg: "64rem",
       xl: "80rem",
       "2xl": "96rem",
+      "3xl": "114rem",
       full: "100%",
       min: "min-content",
       max: "max-content",

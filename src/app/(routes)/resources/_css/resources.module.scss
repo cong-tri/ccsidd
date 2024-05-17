@@ -1,0 +1,72 @@
+/** @format */
+
+// --------- start resources page ----------
+#resources {
+  height: 100%;
+  #resContextCollapse {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #6c6c6c;
+    @media screen and (min-width: 360px) {
+      padding: 0;
+      font-size: 14px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding: 0;
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1824px) {
+      padding: 0;
+      font-size: 20px;
+      line-height: 40px;
+    }
+    @media screen and (max-height: 440px) {
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 360px) {
+    #resourceTabDesktop {
+      display: none;
+    }
+    #resourceTabMobile {
+      display: block;
+    }
+    margin: 120px 0 6.25rem 0;
+  }
+  @media screen and (min-width: 768px) {
+    #resourceTabDesktop {
+      display: none;
+    }
+    #resourceTabMobile {
+      display: block;
+    }
+    margin: 10rem 0;
+  }
+  @media screen and (min-width: 1280px) {
+    #resourceTabDesktop {
+      display: block;
+    }
+    #resourceTabMobile {
+      display: none;
+    }
+    margin: 6.25rem 0;
+  }
+  @media screen and (min-width: 1824px) {
+    #resourceTabDesktop {
+      display: block;
+    }
+    #resourceTabMobile {
+      display: none;
+    }
+    margin: 12rem 0;
+  }
+  @media screen and (max-height: 440px) {
+    margin: 7rem 0;
+  }
+}
+// --------- end resources page ----------

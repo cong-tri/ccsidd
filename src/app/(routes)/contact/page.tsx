@@ -3,24 +3,24 @@ import React from "react";
 import { Row, Col } from "antd";
 import FormContact from "./_components/FormContact";
 import MapContact from "./_components/MapContact";
-import styles from "../../index.module.scss";
+import styleContact from "./_css/contact.module.scss";
 
 const ContactPage = async () => {
   const itemsContentContact = [
     {
       key: 1,
-      id: styles.contactForm,
+      id: styleContact.contactForm,
       children: <FormContact />,
     },
     {
       key: 2,
-      id: styles.contactMap,
+      id: styleContact.contactMap,
       children: <MapContact />,
     },
   ];
   return (
     <>
-      <section id={styles.contact} className='container'>
+      <section id={styleContact.contact} className='container'>
         <Row gutter={30} align={"top"}>
           {itemsContentContact.map((items) => {
             return (

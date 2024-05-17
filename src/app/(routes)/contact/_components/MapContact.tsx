@@ -1,60 +1,25 @@
 /** @format */
 
 "use client";
-import React, { useState } from "react";
-import { Col, Row } from "antd";
-import styles from "../../../index.module.scss";
+import React from "react";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+import { Col, Row } from "antd";
+import { map } from "../_assets/map";
+import styleContact from "../_css/contact.module.scss";
 
-const optionSelectMap = [
-  {
-    id: "1",
-    label: <h1>SINGAPORE</h1>,
-    location: "SINGAPORE",
-    address: (
-      <p>
-        63 Kaki Bukit Place #05-01. <br />
-        Singapore 416234. <br />
-        Phone: +65 67481737. <br />
-        Fax: +65 67484812. <br />
-        After office hour hotline for <br />
-        Mobile suspension: +65 67451505.
-        <br />
-        Customer Service: <br /> service@ccsidd.com. <br />
-        Sales: sales@ccsidd.com.
-      </p>
-    ),
-  },
-  {
-    id: "2",
-    label: (
-      <h1>
-        VIETNAM <br />
-        (Representative Office)
-      </h1>
-    ),
-    location: "VIETNAM",
-    address: (
-      <p>
-        15 Dong Da Street, <br /> District Tan Binh, <br /> Ward 2 Ho Chi Minh
-        City.
-      </p>
-    ),
-  },
-];
 const MapContact = () => {
   const mapKey = process.env.MAP_KEY as string;
-  const [center, setCenter] = useState("1.335288, 103.904813");
-  const [q, setQ] = useState("place_id:ChIJhf3MzfoX2jERizLLab4oJYk");
+  const [center, setCenter] = React.useState(map.Singapore.plusCode);
+  const [q, setQ] = React.useState(map.Singapore.placeId);
   const handleSelectLocation = (location: any) => {
     switch (location) {
-      case "SINGAPORE":
-        setCenter("1.335288, 103.904813");
-        setQ("place_id:ChIJhf3MzfoX2jERizLLab4oJYk");
+      case map.Singapore.location:
+        setCenter(map.Singapore.plusCode);
+        setQ(map.Singapore.placeId);
         break;
-      case "VIETNAM":
-        setCenter("10.809316523310306, 106.66542228466048");
-        setQ("place_id:ChIJYWdMOiMpdTERhvWxg32LRRA");
+      case map.Vietnam.location:
+        setCenter(map.Vietnam.plusCode);
+        setQ(map.Vietnam.placeId);
         break;
       default:
         break;
@@ -74,24 +39,29 @@ const MapContact = () => {
         q={q}
         center={center}
       />
-      <Row id={styles.contactLocation}>
-        {optionSelectMap.map((item) => {
-          return (
-            <Col
-              xs={24}
-              sm={24}
-              md={12}
-              className=''
-              id={styles.itemContactLocation}
-              key={item.id}
-              onClick={() => {
-                handleSelectLocation(item.location);
-              }}>
-              {item.label}
-              {item.address}
-            </Col>
-          );
-        })}
+      <Row id={styleContact.contactLocation}>
+        <Col
+          xs={24}
+          sm={24}
+          md={12}
+          id={styleContact.itemContactLocation}
+          onClick={() => {
+            handleSelectLocation(map.Singapore.location);
+          }}>
+          {map.Singapore.title}
+          {map.Singapore.info}
+        </Col>
+        <Col
+          xs={24}
+          sm={24}
+          md={12}
+          id={styleContact.itemContactLocation}
+          onClick={() => {
+            handleSelectLocation(map.Vietnam.location);
+          }}>
+          {map.Vietnam.title}
+          {map.Vietnam.info}
+        </Col>
       </Row>
     </>
   );

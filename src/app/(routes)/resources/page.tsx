@@ -2,12 +2,12 @@
 
 import React from "react";
 import TabCollapse from "./_components/TabCollapse";
-import styles from "../../index.module.scss";
+import styleService from "./_css/resources.module.scss";
 
 const Resources = async () => {
   return (
     <>
-      <section id={styles.resources}>
+      <section id={styleService.resources}>
         <div className='container'>
           <TabCollapse />
         </div>

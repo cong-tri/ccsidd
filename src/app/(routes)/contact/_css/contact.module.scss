@@ -1,0 +1,154 @@
+/** @format */
+
+// --------- start contact page ----------
+#contact {
+  height: 100%;
+  #contactForm {
+    #labelForm {
+      color: #1565c0;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    #btnForm {
+      background-color: #00acc1;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 30px;
+      font-size: 20px;
+      color: #ffffff;
+      letter-spacing: 0.23px;
+      text-align: center;
+      transition: all 0.5s;
+      &:hover {
+        background-color: #1565c0;
+      }
+    }
+    @media screen and (min-width: 360px) {
+      #labelForm {
+        font-size: 18px;
+      }
+      #btnForm {
+        padding: 10px 20px;
+        margin-top: 1rem;
+        font-size: 16px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      #labelForm {
+        font-size: 20px;
+      }
+      #btnForm {
+        padding: 8px 20px;
+        font-size: 20px;
+      }
+    }
+    @media screen and (min-width: 1824px) {
+      #labelForm {
+        font-size: 25px;
+      }
+      #btnForm {
+        padding: 10px 20px;
+        font-size: 25px;
+        margin-top: 0;
+      }
+    }
+    @media screen and (max-height: 440px) {
+      #labelForm {
+        font-size: 18px;
+      }
+      #btnForm {
+        font-size: 18px;
+      }
+    }
+  }
+  #contactMap {
+    #contactLocation {
+      #itemContactLocation {
+        cursor: pointer;
+        h1 {
+          clear: both;
+          margin: 20px 0;
+          font-size: 20px;
+          font-weight: 700;
+          color: #1565c0;
+          letter-spacing: 0.28px;
+          text-align: left;
+          br {
+            @media screen and (min-width: 1536px) {
+              display: none;
+            }
+          }
+        }
+        p {
+          font-weight: 500;
+          font-size: 18px;
+          color: #1565c0;
+          letter-spacing: 0.21px;
+          text-align: left;
+        }
+        @media screen and (max-width: 576px) {
+          h1 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+        @media screen and (min-width: 768px) {
+          h1 {
+            font-size: 22px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+        @media screen and (min-width: 1280px) {
+          h1 {
+            font-size: 20px;
+            margin: 10px 0 10px 0;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+        @media screen and (min-width: 1824px) {
+          h1 {
+            font-size: 26px;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+        @media screen and (max-height: 440px) {
+          h1 {
+            font-size: 18px;
+            margin: 10px 0 !important;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      @media screen and (max-height: 440px) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  @media screen and (min-width: 360px) {
+    margin: 6.25rem 0 2rem 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 6rem 0 2rem;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 5rem 0 0 0;
+  }
+  @media screen and (min-width: 1824px) {
+    margin: 8rem 0 5rem 0;
+  }
+  @media screen and (max-height: 440px) {
+    margin: 6rem 0 0 0;
+  }
+}
+// --------- end contact page ----------

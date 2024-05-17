@@ -7,13 +7,13 @@ import { Col, Row } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
-import styleComponent from "./css/service.module.scss";
-import styles from "../../../index.module.scss";
+import styleService from "../_css/service.module.scss";
+import styleGlobal from "../../../index.module.scss";
 const Service = () => {
   return (
     <>
-      <section id={styleComponent.service} className='container'>
-        <Title id={styles.title}>Service</Title>
+      <section id={styleService.service} className='container'>
+        <Title id={styleGlobal.title}>Service</Title>
         <Row align={"middle"}>
           <Col xs={0} sm={0} md={24} lg={12} className='mx-auto'>
             <Image
@@ -22,21 +22,24 @@ const Service = () => {
               height={100}
               quality={100}
               alt='MOBILE SERVICE'
-              id={styleComponent.serImage}
+              id={styleService.serImage}
             />
           </Col>
           <Col xs={24} sm={24} md={24} lg={12}>
             <Title
               level={1}
-              id={styleComponent.serLabel}
-              className={styles.colorBlue1}>
+              id={styleService.serLabel}
+              className={styleGlobal.colorBlue1}>
               MOBILE SERVICE
             </Title>
-            <div id={styleComponent.serContent} className={styles.colorBlue2}>
-              <Paragraph className={`${styles.colorBlue2} hidden md:block`}>
+            <div
+              id={styleService.serContent}
+              className={styleGlobal.colorBlue2}>
+              <Paragraph
+                className={`${styleGlobal.colorBlue2} hidden md:block`}>
                 <p>
                   CCS has attained the{" "}
-                  <span className={`${styles.colorBlue1}`}>
+                  <span className={`${styleGlobal.colorBlue1}`}>
                     Mobile Virtual Network Operator License (MVNO)
                   </span>{" "}
                   in 2009, where we provide postpaid mobile plans to our
@@ -59,15 +62,15 @@ const Service = () => {
                 </p>
               </Paragraph>
               <Paragraph
-                className={`${styles.colorBlue2} block md:hidden`}
+                className={`${styleGlobal.colorBlue2} block md:hidden`}
                 ellipsis={{
                   rows: 10,
                   expandable: true,
-                  symbol: <RightOutlined className={styles.colorBlue2} />,
+                  symbol: <RightOutlined className={styleGlobal.colorBlue2} />,
                 }}>
                 <p>
                   CCS has attained the{" "}
-                  <span className={`${styles.colorBlue1} font-bold`}>
+                  <span className={`${styleGlobal.colorBlue1} font-bold`}>
                     Mobile Virtual Network Operator License (MVNO)
                   </span>{" "}
                   in 2009, where we provide postpaid mobile plans to our
@@ -96,8 +99,8 @@ const Service = () => {
           <button className='transition duration-300 ease-in-out hover:translate-y-2'>
             <Link
               href={"/services"}
-              id={styleComponent.serBtnViewMore}
-              className={styles.colorWhite}>
+              id={styleService.serBtnViewMore}
+              className={styleGlobal.colorWhite}>
               View More Services
             </Link>
           </button>

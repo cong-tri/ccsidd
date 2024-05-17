@@ -4,43 +4,43 @@ import React from "react";
 import Paragraph from "antd/es/typography/Paragraph";
 import Title from "antd/es/typography/Title";
 import { RightOutlined } from "@ant-design/icons";
-import styleComponent from "./css/about.module.scss";
-import styles from "../../../index.module.scss";
-import { about } from "./(assests)/about";
+import { about } from "../_assets/about";
+import styleAbout from "../_css/about.module.scss";
+import styleGlobal from "../../../index.module.scss";
 
 const About = () => {
   return (
     <>
-      <section id={styleComponent.aboutus}>
+      <section id={styleAbout.aboutus}>
         <div className='container'>
-          <Title level={1} id={styles.title}>
+          <Title level={1} id={styleGlobal.title}>
             {about.header}
           </Title>
-          <div id={styleComponent.aboutContent}>
-            <Paragraph className={`${styles.colorBlue1} hidden xl:block`}>
+          <div id={styleAbout.aboutContent}>
+            <Paragraph className={`${styleGlobal.colorBlue1} hidden xl:block`}>
               {about.info.map((item, index) => {
                 return <p key={index}>{item.description}</p>;
               })}
             </Paragraph>
             <Paragraph
-              className={`${styles.colorBlue1} block xl:hidden`}
+              className={`${styleGlobal.colorBlue1} block xl:hidden`}
               ellipsis={{
                 rows: 18,
                 expandable: true,
-                symbol: <RightOutlined className={styles.colorBlue1} />,
+                symbol: <RightOutlined className={styleGlobal.colorBlue1} />,
               }}>
               {about.info.map((item, index) => {
                 return <p key={index}>{item.description}</p>;
               })}
             </Paragraph>
           </div>
-          <div id={styleComponent.aboutContentMinH}>
+          <div id={styleAbout.aboutContentMinH}>
             <Paragraph
-              className={styles.colorBlue1}
+              className={styleGlobal.colorBlue1}
               ellipsis={{
                 rows: 9,
                 expandable: true,
-                symbol: <RightOutlined className={styles.colorBlue1} />,
+                symbol: <RightOutlined className={styleGlobal.colorBlue1} />,
               }}>
               {about.info.map((item, index) => {
                 return <p key={index}>{item.description}</p>;

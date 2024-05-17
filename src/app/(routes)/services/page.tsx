@@ -1,12 +1,11 @@
 /** @format */
 import React from "react";
-import ItemsServices from "./_component/ItemsServices";
-import styles from "../../index.module.scss";
-
+import ItemsServices from "./_components/ItemsServices";
+import styleService from "./_css/services.module.scss";
 const ServicesPage = () => {
   return (
     <>
-      <section id={styles.services}>
+      <section id={styleService.services}>
         <ItemsServices />
       </section>
     </>

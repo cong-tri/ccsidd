@@ -154,6 +154,9 @@ header {
   .ant-modal .ant-modal-content {
     padding: 1rem;
   }
+  .ant-timeline .ant-timeline-item {
+    padding-bottom: 20px !important;
+  }
 }
 @media screen and (min-width: 768px) {
   .ant-collapse-header {

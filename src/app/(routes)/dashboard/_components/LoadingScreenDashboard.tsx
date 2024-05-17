@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import Lottie from "lottie-react";
-import animateLoading from "./(assests)/animateLoadingScreen.json";
+import animateLoading from "../_assets/animateLoadingScreen.json";
 const LoadingScreenDashboard = () => {
   return (
     <>

@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import styleComponent from "./css/banner.module.scss";
+import styleComponent from "../_css/banner.module.scss";
 import styles from "../../../index.module.scss";
 const Banner = () => {
   return (

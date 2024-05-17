@@ -7,12 +7,12 @@ import { Col, Drawer, Menu, Row } from "antd";
 import type { MenuProps } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import logo from "../../public/images/logo.png";
-import styleComponent from "./css/header.module.scss";
-import styles from "../app/index.module.scss";
+import styleHeader from "./css/header.module.scss";
+import styleGlobal from "../app/index.module.scss";
 const items: MenuProps["items"] = [
   {
     label: (
-      <Link href={"/"} className={styles.colorBlue2}>
+      <Link href={"/"} className={styleGlobal.colorBlue2}>
         Home
       </Link>
     ),
@@ -20,7 +20,7 @@ const items: MenuProps["items"] = [
   },
   {
     label: (
-      <Link href={"/services"} className={styles.colorBlue2}>
+      <Link href={"/services"} className={styleGlobal.colorBlue2}>
         Services
       </Link>
     ),
@@ -28,7 +28,7 @@ const items: MenuProps["items"] = [
   },
   {
     label: (
-      <Link href={"/resources"} className={styles.colorBlue2}>
+      <Link href={"/resources"} className={styleGlobal.colorBlue2}>
         Resources
       </Link>
     ),
@@ -36,7 +36,7 @@ const items: MenuProps["items"] = [
   },
   {
     label: (
-      <Link href={"/contact"} className={styles.colorBlue2}>
+      <Link href={"/contact"} className={styleGlobal.colorBlue2}>
         Contact
       </Link>
     ),
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           <Col span={8}>
             <Link href={"/"}>
               <Image
-                id={styleComponent.headerLogoImg}
+                id={styleHeader.headerLogoImg}
                 className='cursor-pointer object-contain'
                 src={logo}
                 quality={100}
@@ -67,8 +67,8 @@ const Header: React.FC = () => {
           </Col>
           <Col xs={16} sm={16} md={0}>
             <MenuOutlined
-              className={styles.colorBlue2}
-              id={styleComponent.headerCollapseBtn}
+              className={styleGlobal.colorBlue2}
+              id={styleHeader.headerCollapseBtn}
               onClick={() => {
                 setOpenMenu(true);
               }}
@@ -96,7 +96,7 @@ const Navbar = ({ isInline = false }) => {
     <>
       <Menu
         mode={isInline ? "inline" : "horizontal"}
-        id={styleComponent.headerNav}
+        id={styleHeader.headerNav}
         items={items}
       />
     </>
