@@ -10,7 +10,7 @@ import styleContact from "../_css/contact.module.scss";
 
 const { Option } = Select;
 const FormContact = () => {
-  const siteKey = process.env.SITE_KEY as string;
+  const siteKey: string = process.env.SITE_KEY as string ?? "";
   const [form] = Form.useForm();
   const [state, formAction] = useFormState(handleSendMail, "");
   const handleOnchangeCaptcha = (value: any) => {
