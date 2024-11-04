@@ -1,16 +1,23 @@
 /** @format */
 
 "use client";
+
 import React from "react";
+
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+
 import { Col, Row } from "antd";
+
 import { map } from "../_assets/map";
+
 import styleContact from "../_css/contact.module.scss";
 
 const MapContact = () => {
   const mapKey = process.env.MAP_KEY as string;
+
   const [center, setCenter] = React.useState(map.Singapore.plusCode);
   const [q, setQ] = React.useState(map.Singapore.placeId);
+
   const handleSelectLocation = (location: any) => {
     switch (location) {
       case map.Singapore.location:

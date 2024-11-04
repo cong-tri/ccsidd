@@ -1,11 +1,15 @@
 /** @format */
 import React from "react";
+
 import { Row, Col } from "antd";
+
 import FormContact from "./_components/FormContact";
 import MapContact from "./_components/MapContact";
+
 import styleContact from "./_css/contact.module.scss";
 
 const ContactPage = async () => {
+
   const itemsContentContact = [
     {
       key: 1,
@@ -18,6 +22,7 @@ const ContactPage = async () => {
       children: <MapContact />,
     },
   ];
+
   return (
     <>
       <section id={styleContact.contact} className='container'>

@@ -1,11 +1,15 @@
 /** @format */
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@/components/Header";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
-import Footer from "@/components/Footer";
-import "./globals.css";
 import Head from "next/head";
+import { Inter } from "next/font/google";
+
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+import "./globals.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,6 +32,7 @@ export default function RootLayout({
           sizes='16x16'
         />
       </Head>
+
       <body className={inter.className}>
         <Header />
         <AntdRegistry>{children}</AntdRegistry>

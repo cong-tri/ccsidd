@@ -1,10 +1,14 @@
 /** @format */
 "use client";
+
 import React from "react";
+
 import { Carousel, Timeline } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
+
 import { profile } from "../_assets/profile";
+
 import styleProfile from "../_css/profile.module.scss";
 import styleGlobal from "../../../index.module.scss";
 
@@ -34,7 +38,9 @@ const TimeLineProfile = () => {
     }, []);
     return width;
   };
+
   var width_screen = useWidth();
+
   const chunkArray = (myArray: any, chunk_size: any) => {
     var index = 0;
     var arrayLength = myArray.length;
@@ -45,6 +51,7 @@ const TimeLineProfile = () => {
     }
     return tempArray;
   };
+
   const contentTimeline = profile.info.map((item: any) => {
     if (width_screen > 768) {
       return {
@@ -74,6 +81,7 @@ const TimeLineProfile = () => {
               className={styleGlobal.colorBlue1}>
               {item.title}
             </Title>
+
             <Paragraph
               id={styleProfile.timelineContext}
               className={styleGlobal.colorBlue1}>
@@ -84,6 +92,7 @@ const TimeLineProfile = () => {
       };
     }
   });
+
   const itemsTimeline = chunkArray(contentTimeline, 5);
 
   return (
@@ -100,9 +109,11 @@ const TimeLineProfile = () => {
             <div>
               <Timeline mode='alternate' items={itemsTimeline[0]} />
             </div>
+
             <div>
               <Timeline mode='alternate' items={itemsTimeline[1]} />
             </div>
+
             <div>
               <Timeline mode='alternate' items={itemsTimeline[2]} />
             </div>
@@ -119,9 +130,11 @@ const TimeLineProfile = () => {
             <div>
               <Timeline items={itemsTimeline[0]} />
             </div>
+
             <div>
               <Timeline items={itemsTimeline[1]} />
             </div>
+
             <div>
               <Timeline items={itemsTimeline[2]} />
             </div>

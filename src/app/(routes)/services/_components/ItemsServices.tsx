@@ -1,12 +1,17 @@
 /** @format */
 "use client";
+
 import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
+
 import { Col, Modal, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
+
 import { services } from "../_assets/services";
+
 import styleServices from "../_css/services.module.scss";
 import styleModal from "../_css/modal.module.scss";
 import styleGlobal from "../../../index.module.scss";
@@ -19,9 +24,12 @@ const listServices = services.map((item, index) => {
     serImage: item.img,
   };
 });
+
 const ItemsServices = () => {
+
   const [open, setOpen] = React.useState(false);
   const [data, setData] = React.useState({});
+
   const ModalService = ({ data }: any) => {
     console.log(data);
     if (Object.keys(data).length == 0) {
@@ -51,6 +59,7 @@ const ItemsServices = () => {
       </>
     );
   };
+
   return (
     <>
       <div className='container'>
@@ -58,6 +67,7 @@ const ItemsServices = () => {
           align={"middle"}
           justify={"center"}
           gutter={{ xs: 20, sm: 24, md: 30, lg: 30, xxl: 40 }}>
+
           {listServices.map((item) => {
             return (
               <>
@@ -104,8 +114,10 @@ const ItemsServices = () => {
               </>
             );
           })}
+
         </Row>
       </div>
+
       <ModalService data={data} />
     </>
   );

@@ -1,7 +1,10 @@
 /** @format */
 import React from "react";
+
 import ItemsServices from "./_components/ItemsServices";
+
 import styleService from "./_css/services.module.scss";
+
 const ServicesPage = () => {
   return (
     <>

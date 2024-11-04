@@ -22,6 +22,7 @@ export async function handleSendMail(
           pass: process.env.AUTH_PASS,
         },
       } as SMTPTransport.Options);
+
       await transporter.sendMail({
         from: process.env.SENDER,
         to: process.env.SENDER,
@@ -33,6 +34,7 @@ export async function handleSendMail(
           Message: ${formData.message}\n
         `,
       });
+
       transporter.verify(function (error, success) {
         if (error) {
           console.log(error);
@@ -40,7 +42,9 @@ export async function handleSendMail(
           console.log(success);
         }
       });
+
       transporter.close();
+
       return "Successfully Send Contact To CCSIDD";
     } catch (error) {
       console.log(error);

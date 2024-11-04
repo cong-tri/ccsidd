@@ -1,11 +1,12 @@
 /** @format */
 
 import React from "react";
+
 import Link from "next/link";
+
 import { Col, Collapse, CollapseProps, Row, Tabs, TabsProps } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
 import {
-  ArrowRightOutlined,
   AudioOutlined,
   DoubleRightOutlined,
   DownloadOutlined,
@@ -14,6 +15,7 @@ import {
   PhoneOutlined,
   ReadOutlined,
 } from "@ant-design/icons";
+
 import { premium_vq_connect } from "../_assets/premium_vq_connect";
 import { mobile } from "../_assets/mobile";
 import { call_back } from "../_assets/call_back";
@@ -21,6 +23,7 @@ import { call_forwarding } from "../_assets/call_forwarding";
 import { rtone } from "../_assets/rtone";
 import { definitions } from "../_assets/definitions";
 import { download } from "../_assets/download";
+
 import styleResource from "../_css/resources.module.scss";
 import styleGlobal from "../../../index.module.scss";
 
@@ -114,6 +117,7 @@ const contentDowload = download.info.map((item, index) => {
 });
 
 const TabCollapse = () => {
+
   const itemResourcesTab: TabsProps["items"] = [
     {
       key: "1",

@@ -1,18 +1,26 @@
 /** @format */
 "use client";
+
 import React from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import { useFormState } from "react-dom";
+
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { handleSendMail } from "../actions";
+
 import { Form, Input, Select, message } from "antd";
 import Title from "antd/es/typography/Title";
+
 import styleContact from "../_css/contact.module.scss";
 
 const { Option } = Select;
 const FormContact = () => {
-  const siteKey: string = process.env.SITE_KEY as string ?? "";
   const [form] = Form.useForm();
+
+  const siteKey: string = process.env.SITE_KEY as string ?? "";
+
   const [state, formAction] = useFormState(handleSendMail, "");
+
   const handleOnchangeCaptcha = (value: any) => {
     console.log(value);
   };
