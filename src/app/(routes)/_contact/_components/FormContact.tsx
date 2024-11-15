@@ -82,11 +82,11 @@ const FormContact = () => {
         </Form.Item>
         <Form.Item>
           <div className='xl:flex xl:items-center'>
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
               size='normal'
               sitekey={siteKey}
               onChange={handleOnchangeCaptcha}
-            />
+            /> */}
             <button
               type='submit'
               id={styleContact.btnForm}
