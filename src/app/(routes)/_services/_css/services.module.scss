@@ -1,0 +1,147 @@
+/** @format */
+@import "/src/styles/variables";
+
+// --------- start service page ---------
+#services {
+  height: 100%;
+  .bgBlack{
+    background-color: $bg-black;
+  }
+  #serItems {
+    // text-align: center;
+    margin: auto;
+    #serItemsImage {
+      object-fit: contain;
+      margin: 0 auto;
+      @media screen and (min-width: 360px) {
+        height: 50px;
+        width: 50px;
+      }
+      @media screen and (min-width: 768px) {
+        height: 5rem;
+        width: 5rem;
+      }
+      @media screen and (min-width: 1280px) {
+        height: 8.5rem;
+        width: 8.5rem;
+      }
+      @media screen and (min-width: 1824px) {
+        height: 150px;
+        width: 150px;
+      }
+      @media screen and (max-height: 440px) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    #serItemsTitle {
+      // margin: 30px 0;
+      font-size: 50px;
+      font-weight: 600;
+      color: #a3a3a5;
+      letter-spacing: 0.28px;
+      text-transform: uppercase;
+      @media screen and (min-width: 360px) {
+        font-size: 25px;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 50px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: 50px;
+      }
+      @media (min-height: 320px) and (max-height: 440px) {
+        font-size: 20px;
+        margin: 6px 0;
+      }
+    }
+    #serItemsName{
+      font-size: 24px;
+      color: $color-white;
+      background-color: $color-blue2; 
+      margin: 0;
+      padding: 16px;
+      width: auto;
+      text-transform: uppercase;
+      border-radius: 8px;
+      @media screen and (min-width: 360px) {
+        font-size: 20px;
+        padding: 10px;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 24px;
+        padding: 16px;
+      }
+    }
+    #serItemsContent {
+      text-align: justify;
+      font-size: 1rem;
+      // color: #00acc1;
+      font-weight: 500;
+      letter-spacing: 0.19px;
+      line-height: 30px;
+      @media screen and (min-width: 360px) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: 25px;
+      }
+      @media screen and (max-height: 440px) {
+        font-size: 14px;
+      }
+      #serItemsSymbol {
+        padding-left: 5px;
+        color: #00acc1;
+        font-size: 1.25rem;
+        @media (min-height: 320px) and (max-height: 440px) {
+          font-size: 15px;
+        }
+      }
+    }
+    #serItemsBtnSeeMore {
+      font-size: 20px;
+      cursor: pointer;
+      @media screen and (min-width: 360px) {
+        font-size: 18px;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 22px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: 25px;
+      }
+    }
+    @media screen and (max-height: 440px) {
+      width: 50%;
+    }
+  }
+
+  // @media screen and (min-width: 360px) {
+  //   margin: 120px 0 6.25rem 0;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   margin: 10rem 0;
+  // }
+  @media screen and (min-width: 1280px) {
+    // margin: 6.25rem 0;
+  }
+  @media screen and (min-width: 1824px) {
+    margin: 10rem 0;
+  }
+  // @media (min-height: 320px) and (max-height: 440px) {
+  //   margin: 50px 0;
+  // }
+}
+// --------- end service page -----------

@@ -4,7 +4,7 @@ import Link from "next/link";
 import logo from "../../public/images/logo.png";
 
 import styleFooter from "./css/footer.module.scss";
-import styleGlobal from "../app/index.module.scss";
+import styleGlobal from "../styles/index.module.scss";
 const Footer = () => {
   return (
     <>

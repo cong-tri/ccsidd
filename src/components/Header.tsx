@@ -1,71 +1,59 @@
 /** @format */
 "use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 import { Col, Drawer, Menu, Row } from "antd";
 import type { MenuProps } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
+
 import logo from "../../public/images/logo.png";
+
 import styleHeader from "./css/header.module.scss";
-import styleGlobal from "../app/index.module.scss";
-const items: MenuProps["items"] = [
-  {
+import styleGlobal from "../styles/index.module.scss";
+
+import { listNav } from "./_assets/navbar";
+
+const items: MenuProps["items"] = listNav.map((items) => {
+  return {
     label: (
-      <Link href={"/"} className={styleGlobal.colorBlue2}>
-        Home
+      <Link href={items.path} className={styleGlobal.colorBlue2}>
+        {items.label}
       </Link>
     ),
-    key: "home",
-  },
-  {
-    label: (
-      <Link href={"/services"} className={styleGlobal.colorBlue2}>
-        Services
-      </Link>
-    ),
-    key: "service",
-  },
-  {
-    label: (
-      <Link href={"/resources"} className={styleGlobal.colorBlue2}>
-        Resources
-      </Link>
-    ),
-    key: "resource",
-  },
-  {
-    label: (
-      <Link href={"/contact"} className={styleGlobal.colorBlue2}>
-        Contact
-      </Link>
-    ),
-    key: "contact",
-  },
-];
+    key: items.key,
+  };
+});
 
 const Header: React.FC = () => {
+
   const [openMenu, setOpenMenu] = useState(false);
+  const [currentPath, setCurrentPath] = useState('home');
+
+  const onClick: MenuProps["onClick"] = (e) => {
+    setCurrentPath(e.key);
+    console.log(e.key);
+  }
 
   return (
     <>
       <header>
-        <Row gutter={0} align={"middle"}>
-          <Col span={8}>
+        <Row gutter={0} align={"middle"} justify={"space-between"}>
+          <Col span={"auto"}>
             <Link href={"/"}>
               <Image
                 id={styleHeader.headerLogoImg}
-                className='cursor-pointer object-contain'
+                className="cursor-pointer object-contain"
                 src={logo}
                 quality={100}
-                alt='Logo Compony'
+                alt="Logo Compony"
               />
             </Link>
           </Col>
-          <Col xs={0} sm={0} md={16}>
-            <Navbar />
-          </Col>
-          <Col xs={16} sm={16} md={0}>
+
+          <Col span={"auto"}>
             <MenuOutlined
               className={styleGlobal.colorBlue2}
               id={styleHeader.headerCollapseBtn}
@@ -75,30 +63,27 @@ const Header: React.FC = () => {
             />
           </Col>
         </Row>
+
         <Drawer
-          placement='right'
-          style={{ width: 250 }}
-          className='float-right border-none w-auto'
+          placement="right"
+          style={{ width: 350 }}
+          className="float-right border-none w-auto"
           open={openMenu}
           onClose={() => {
             setOpenMenu(false);
           }}
-          closable={false}>
-          <Navbar isInline />
+          closable={true}
+        >
+          <Menu
+            mode="vertical"
+            id={styleHeader.headerNav}
+            items={items}
+            defaultSelectedKeys={[currentPath]}
+            selectedKeys={[currentPath]}
+            onClick={onClick}
+          />
         </Drawer>
       </header>
-    </>
-  );
-};
-
-const Navbar = ({ isInline = false }) => {
-  return (
-    <>
-      <Menu
-        mode={isInline ? "inline" : "horizontal"}
-        id={styleHeader.headerNav}
-        items={items}
-      />
     </>
   );
 };

@@ -1,71 +1,55 @@
 /** @format */
 
+@import "/src/styles/_variables.scss";
+
 // --------- start about us component home page -----------
 #aboutus {
   height: 100%;
-  #aboutContent {
-    display: block;
-    p {
-      font-weight: 500;
-      padding: 0;
+
+  #aboutIntroduce {
+    font-size: 32px;
+    text-align: center;
+    color: $color-blue1;
+    font-weight: bold;
+    margin: 0 0 2rem 0;
+    @media screen and (min-width: 360px) {
+      font-size: 22px;
       margin-bottom: 1rem;
-      font-size: 25px;
-      letter-spacing: 2px;
-      line-height: 30px;
-      text-align: justify;
-      @media screen and (min-width: 360px) {
-        font-size: 16px;
-        text-align: left;
-      }
-      @media screen and (min-width: 768px) {
-        font-size: 18px;
-        text-align: left;
-      }
-      @media screen and (min-width: 1280px) {
-        font-size: 18px;
-        text-align: justify;
-      }
-      @media screen and (min-width: 1824px) {
-        font-size: 25px;
-        text-align: justify;
-      }
-      @media screen and (max-height: 440px) {
-        display: none;
-      }
-    }
-    @media screen and (max-height: 440px) {
-      display: none;
     }
   }
-  #aboutContentMinH {
-    display: none;
-    p {
-      font-weight: 500;
-      padding: 0;
-      margin-bottom: 10px;
-      font-size: 14px;
-      letter-spacing: 1px;
-      line-height: 25px;
-      text-align: justify;
-    }
-    @media screen and (max-height: 440px) {
-      display: block;
+  #aboutImage {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  #aboutLabel {
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-blue2;
+    margin: 0 0 16px 0;
+    @media screen and (min-width: 360px) {
+      font-size: 20px;
+      margin-bottom: 12px;
     }
   }
+  #aboutContent {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
   @media screen and (min-width: 360px) {
-    margin: 6.25rem 0;
+    margin-bottom: 2rem;
   }
   @media screen and (min-width: 768px) {
-    margin: 6.25rem 0;
+    margin-bottom: 3rem;
   }
   @media screen and (min-width: 1280px) {
-    margin: 6.25rem 0;
+    margin-bottom: 4rem;
   }
-  @media screen and (min-width: 1824px) {
-    margin: 10rem 0;
-  }
-  @media screen and (max-height: 440px) {
-    margin: 5rem 0;
-  }
+
+  // @media screen and (max-height: 440px) {
+  //   margin: 5rem 0;
+  // }
 }
 // ---------- end about us component home page --------

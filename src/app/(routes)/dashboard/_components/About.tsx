@@ -9,51 +9,55 @@ import { RightOutlined } from "@ant-design/icons";
 import { about } from "../_assets/about";
 
 import styleAbout from "../_css/about.module.scss";
-import styleGlobal from "../../../index.module.scss";
+import styleGlobal from "../../../../styles/index.module.scss";
+import { Col, Row } from "antd";
+import Image from "next/image";
 
 const About = () => {
   return (
     <>
-      <section id={styleAbout.aboutus}>
-        <div className='container'>
+      <section id="aboutus">
+        <div className="container" id={styleAbout.aboutus}>
           <Title level={1} id={styleGlobal.title}>
             {about.header}
           </Title>
 
-          <div id={styleAbout.aboutContent}>
-            <Paragraph className={`${styleGlobal.colorBlue1} hidden xl:block`}>
-              {about.info.map((item, index) => {
-                return <p key={index}>{item.description}</p>;
-              })}
-            </Paragraph>
+          {about.introduce.map((text, index) => {
+            return (
+              <Title level={1} key={index} id={styleAbout.aboutIntroduce}>{text}</Title>
+            )
+          })}
 
-            <Paragraph
-              className={`${styleGlobal.colorBlue1} block xl:hidden`}
-              ellipsis={{
-                rows: 18,
-                expandable: true,
-                symbol: <RightOutlined className={styleGlobal.colorBlue1} />,
-              }}>
-              {about.info.map((item, index) => {
-                return <p key={index}>{item.description}</p>;
+          <Row justify={"space-between"} className="mt-8 md:mt-12 xl:mt-16" align={"middle"}>
+            <Col xs={0} sm={0} md={24} xl={10} xxl={12}>
+              <Image
+                src={"/images/splash/about.png"}
+                alt="Global"
+                id={styleAbout.aboutImage}
+                width={100}
+                height={100}
+                quality={100}
+              />
+            </Col>
+            <Col xs={24} xl={11} xxl={12}>
+              <Title level={4} id={styleAbout.aboutLabel}>Our Solutions</Title>
+              {about.solution.map((text, index) => {
+                return (
+                  <Paragraph key={index} id={styleAbout.aboutContent}>{text}</Paragraph>
+                )
               })}
-            </Paragraph>
-          </div>
 
-          <div id={styleAbout.aboutContentMinH}>
-            <Paragraph
-              className={styleGlobal.colorBlue1}
-              ellipsis={{
-                rows: 9,
-                expandable: true,
-                symbol: <RightOutlined className={styleGlobal.colorBlue1} />,
-              }}>
-              {about.info.map((item, index) => {
-                return <p key={index}>{item.description}</p>;
+              <Title level={4} id={styleAbout.aboutLabel}>Our Believe</Title>
+              <Paragraph id={styleAbout.aboutContent}>{about.believe}</Paragraph>
+
+              <Title level={4} id={styleAbout.aboutLabel}>Our Aims</Title>
+              {about.aim.map((text, index) => {
+                return (
+                  <Paragraph key={index} id={styleAbout.aboutContent}>{text}</Paragraph>
+                )
               })}
-            </Paragraph>
-          </div>
-
+            </Col>
+          </Row>
         </div>
       </section>
     </>

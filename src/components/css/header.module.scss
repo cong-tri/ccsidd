@@ -7,27 +7,26 @@
   font-size: 24px;
   border: 0 !important;
   font-weight: 600;
+  text-align: left;
+
   @media screen and (min-width: 360px) {
     font-size: 20px;
     text-align: left;
   }
   @media screen and (min-width: 768px) {
     font-size: 22px;
-    text-align: right;
   }
   @media screen and (min-width: 1280px) {
     font-size: 24px;
-    text-align: right;
   }
   @media screen and (min-width: 1824px) {
     font-size: 26px;
-    text-align: right;
   }
   @media screen and (max-height: 430px) {
     margin: 0 1rem 0 0;
-    font-size: 16px;
   }
 }
+
 #headerLogoImg {
   margin: 1rem 0 1rem 2rem;
   height: 70px;

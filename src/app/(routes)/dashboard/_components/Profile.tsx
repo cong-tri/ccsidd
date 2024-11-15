@@ -3,23 +3,26 @@
 
 import React from "react";
 
-import { Carousel, Timeline } from "antd";
+import { Carousel, Tabs, Timeline } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
 
 import { profile } from "../_assets/profile";
 
 import styleProfile from "../_css/profile.module.scss";
-import styleGlobal from "../../../index.module.scss";
-
+import styleGlobal from "../../../../styles/index.module.scss";
+//
 const Profile = () => {
   return (
     <>
       <section id={styleProfile.profile}>
-        <Title level={1} id={styleGlobal.title}>
-          PROFILE
-        </Title>
-        <TimeLineProfile />
+        <div className="container">
+          <Title level={1} id={styleGlobal.title}>
+            PROFILE
+          </Title>
+
+          <TimeLine />
+        </div>
       </section>
     </>
   );
@@ -27,7 +30,7 @@ const Profile = () => {
 
 export default Profile;
 
-const TimeLineProfile = () => {
+const TimeLine = () => {
   const useWidth = () => {
     const [width, setWidth] = React.useState(0);
     const handleResize = () => setWidth(window.innerWidth);
@@ -59,14 +62,14 @@ const TimeLineProfile = () => {
           <Title
             level={1}
             id={styleProfile.timelineLabelYear}
-            className={styleGlobal.colorBlue1}>
+          >
             {item.title}
           </Title>
         ),
         children: (
           <Paragraph
             id={styleProfile.timelineContext}
-            className={styleGlobal.colorBlue1}>
+          >
             {item.description}
           </Paragraph>
         ),
@@ -78,13 +81,13 @@ const TimeLineProfile = () => {
             <Title
               level={1}
               id={styleProfile.timelineLabelYear}
-              className={styleGlobal.colorBlue1}>
+            >
               {item.title}
             </Title>
 
             <Paragraph
               id={styleProfile.timelineContext}
-              className={styleGlobal.colorBlue1}>
+            >
               {item.description}
             </Paragraph>
           </>
@@ -97,50 +100,33 @@ const TimeLineProfile = () => {
 
   return (
     <>
-      <div id={styleProfile.timeline}>
-        <div className='xs:hidden md:block'>
-          <Carousel
-            dots={false}
-            draggable
-            pauseOnDotsHover={true}
-            pauseOnHover={true}
-            autoplay
-            autoplaySpeed={3000}>
-            <div>
-              <Timeline mode='alternate' items={itemsTimeline[0]} />
-            </div>
-
-            <div>
-              <Timeline mode='alternate' items={itemsTimeline[1]} />
-            </div>
-
-            <div>
-              <Timeline mode='alternate' items={itemsTimeline[2]} />
-            </div>
-          </Carousel>
+      <section id="profile">
+        <div id={styleProfile.timeline}>
+          <Tabs
+            defaultActiveKey="1"
+            centered
+            type="card"
+            size="large"
+            items={[
+              {
+                key: "1",
+                label: "1998 - 2003",
+                children: <><Timeline mode={width_screen < 768 ? "left" : "alternate"} items={itemsTimeline[0]} /></>
+              },
+              {
+                key: "2",
+                label: "2004 - 2009",
+                children: <><Timeline mode={width_screen < 768 ? "left" : "alternate"} items={itemsTimeline[1]} /></>
+              },
+              {
+                key: "3",
+                label: "2010 - 2016",
+                children: <><Timeline mode={width_screen < 768 ? "left" : "alternate"} items={itemsTimeline[2]} /></>
+              }
+            ]}
+          />
         </div>
-        <div className='xs:block md:hidden'>
-          <Carousel
-            dots={false}
-            draggable
-            pauseOnDotsHover={true}
-            pauseOnHover={true}
-            // autoplay
-            autoplaySpeed={3000}>
-            <div>
-              <Timeline items={itemsTimeline[0]} />
-            </div>
-
-            <div>
-              <Timeline items={itemsTimeline[1]} />
-            </div>
-
-            <div>
-              <Timeline items={itemsTimeline[2]} />
-            </div>
-          </Carousel>
-        </div>
-      </div>
+      </section>
     </>
   );
 };
