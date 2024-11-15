@@ -15,7 +15,7 @@ const HomePage = async () => {
       <ServicesPage />
       <About />
       <Profile />
-      <ContactPage />
+      {/* <ContactPage /> */}
       <Resources />
     </>
   );
