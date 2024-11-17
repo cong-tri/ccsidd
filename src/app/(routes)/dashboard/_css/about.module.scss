@@ -12,10 +12,16 @@
     color: $color-blue1;
     font-weight: bold;
     margin: 0 0 2rem 0;
+
     @media screen and (min-width: 360px) {
       font-size: 22px;
       margin-bottom: 1rem;
     }
+    @media screen and (min-width: 1280px) {
+      font-size: 32px;
+      margin-bottom: 2rem;
+    }
+
   }
   #aboutImage {
     height: 100%;
@@ -26,10 +32,14 @@
     font-size: 24px;
     font-weight: bold;
     color: $color-blue2;
-    margin: 0 0 16px 0;
+    margin: 0 0 1rem 0;
     @media screen and (min-width: 360px) {
       font-size: 20px;
       margin-bottom: 12px;
+    }
+    @media screen and (min-width: 360px) {
+      font-size: 24px;
+      margin-bottom: 1rem;
     }
   }
   #aboutContent {
@@ -37,7 +47,6 @@
     font-weight: 500;
     margin-bottom: 12px;
   }
-
   @media screen and (min-width: 360px) {
     margin-bottom: 2rem;
   }

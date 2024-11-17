@@ -30,44 +30,12 @@
       font-size: 14px;
     }
   }
-  // @media screen and (min-width: 360px) {
-  //   #resourceTabDesktop {
-  //     display: none;
-  //   }
-  //   #resourceTabMobile {
-  //     display: block;
-  //   }
-  //   margin: 120px 0 6.25rem 0;
-  // }
-  // @media screen and (min-width: 768px) {
-  //   #resourceTabDesktop {
-  //     display: none;
-  //   }
-  //   #resourceTabMobile {
-  //     display: block;
-  //   }
-  //   margin: 10rem 0;
-  // }
-  // @media screen and (min-width: 1280px) {
-  //   #resourceTabDesktop {
-  //     display: block;
-  //   }
-  //   #resourceTabMobile {
-  //     display: none;
-  //   }
-  //   margin: 6.25rem 0;
-  // }
-  // @media screen and (min-width: 1824px) {
-  //   #resourceTabDesktop {
-  //     display: block;
-  //   }
-  //   #resourceTabMobile {
-  //     display: none;
-  //   }
-  //   margin: 12rem 0;
-  // }
-  // @media screen and (max-height: 440px) {
-  //   margin: 7rem 0;
-  // }
+  @media screen and (min-width: 360px) {
+    padding-bottom: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 80px;
+  }
+
 }
 // --------- end resources page ----------

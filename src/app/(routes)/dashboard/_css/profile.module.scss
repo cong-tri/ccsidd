@@ -1,11 +1,11 @@
 /** @format */
-@import '/src/styles/variables';
+@import "/src/styles/variables";
 
 // --------- start profile component home page -----------
 #profile {
   height: 100%;
   background-color: $bg-black;
-  
+
   #timeline {
     #timelineLabelYear {
       color: $color-white !important;
@@ -93,18 +93,15 @@
     //   }
     // }
   }
-  // @media screen and (min-width: 360px) {
-  //   margin: 6.25rem 0 0 0;
-  // }
-  // @media screen and (min-width: 768px) {
-  //   margin: 8rem 0;
-  // }
-  // @media screen and (min-width: 1280px) {
-  //   margin: 6.25rem 0;
-  // }
-  // @media screen and (min-width: 1824px) {
-  //   margin: 0;
-  // }
+  @media screen and (min-width: 360px) {
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 50px;
+  }
   @media (min-height: 320px) and (max-height: 440px) {
     margin: 3.125rem 0;
     height: 100%;

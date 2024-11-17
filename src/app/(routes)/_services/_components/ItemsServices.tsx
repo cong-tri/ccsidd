@@ -16,15 +16,6 @@ import styleServices from "../_css/services.module.scss";
 import styleModal from "../_css/modal.module.scss";
 import styleGlobal from "../../../../styles/index.module.scss";
 
-// const listServices = services.map((item, index) => {
-//   return {
-//     key: index + 1,
-//     serName: item.title,
-//     serDesc: item.description,
-//     serImage: item.img,
-//   };
-// });
-
 const ItemsServices = () => {
   const [open, setOpen] = React.useState(false);
   const [data, setData] = React.useState<ListServices>();
@@ -73,7 +64,7 @@ const ItemsServices = () => {
             >
               <Row
                 align={"middle"}
-                className={`container ${index === 0 ? "pb-20" : "py-20"}`}
+                className={`container ${index === 0 ? "pb-10 xl:pb-20" : "py-10 xl:py-20"}`}
               >
                 <Col
                   xs={24}

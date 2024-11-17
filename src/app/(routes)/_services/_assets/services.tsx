@@ -10,7 +10,7 @@ export type ListServices = {
 export const services: ListServices[] = [
   {
     title: "Mobile Service",
-    name: "MVNO",
+    name: "Mobile Virtual Network Operator",
     description: (
       <>
         <p>
@@ -65,7 +65,7 @@ export const services: ListServices[] = [
 
   {
     title: "Call Forwarding",
-    name: "ICF",
+    name: "International Call Forwarding",
     description: (
       <>
         <p>
