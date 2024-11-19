@@ -38,14 +38,18 @@ const listBanner: BannerList[] = [
     content:
       "(CCS) is service-based operator that specialized in providing overseas calls (Voice, Fax and Inmarsat), roaming solutions and mobile services to corporate market in Singapore.",
     btnContent: "More About Us",
-    pathname: "#aboutus"
+    pathname: "#aboutus",
   },
   {
-    slogan: <>Bridging <br /> Globally</>,
+    slogan: (
+      <>
+        Bridging <br /> Globally
+      </>
+    ),
     label: "",
     content: "",
     btnContent: "Services of CCSIDD",
-    pathname: "#services"
+    pathname: "#services",
   },
 ];
 
@@ -68,13 +72,11 @@ const Banner = () => {
             <div key={index}>
               <section id={styleComponent.banner}>
                 <div className="relative h-screen w-full mt-8">
-                  <h1 id={styleComponent.bannerSlogan}>
-                    {items.slogan}
-                  </h1>
+                  <h1 id={styleComponent.bannerSlogan}>{items.slogan}</h1>
 
                   <div className="absolute container w-full h-full top-48">
                     <Row align={"top"} justify={"center"} gutter={[24, 24]}>
-                      <Col span={12}>
+                      <Col xs={10} md={14}>
                         <Image
                           src={"/images/CCS-logo.png"}
                           alt="Logo CCSIDD"
@@ -84,15 +86,13 @@ const Banner = () => {
                           quality={100}
                         />
                       </Col>
-                      <Col span={12}>
+                      <Col xs={14} md={10}>
                         <div id={styleComponent.bannerContent}>
                           <h1>{items.label}</h1>
                           <p>{items.content}</p>
                           <div>
                             <button className="transition duration-300 ease-in-out hover:-translate-y-2">
-                              <a href={items.pathname}>
-                                {items.btnContent}
-                              </a>
+                              <a href={items.pathname}>{items.btnContent}</a>
                             </button>
                           </div>
                         </div>
@@ -104,7 +104,6 @@ const Banner = () => {
             </div>
           );
         })}
-
       </Carousel>
     </>
   );

@@ -14,14 +14,13 @@
     margin: 0 0 2rem 0;
 
     @media screen and (min-width: 360px) {
-      font-size: 22px;
+      font-size: 20px;
       margin-bottom: 1rem;
     }
     @media screen and (min-width: 1280px) {
-      font-size: 32px;
+      font-size: 24px;
       margin-bottom: 2rem;
     }
-
   }
   #aboutImage {
     height: 100%;
@@ -43,9 +42,15 @@
     }
   }
   #aboutContent {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 12px;
+    @media screen and (min-width: 360px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 18px;
+    }
   }
   @media screen and (min-width: 360px) {
     margin-bottom: 2rem;
