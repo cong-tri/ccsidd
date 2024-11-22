@@ -34,12 +34,13 @@ const About = () => {
                 src={"/images/splash/about.png"}
                 alt="Global"
                 id={styleAbout.aboutImage}
-                width={100}
-                height={100}
+                width={400}
+                height={400}
+                objectFit="contain"
                 quality={100}
               />
             </Col>
-            <Col xs={24} xl={11} xxl={12}>
+            <Col xs={24} xl={12} xxl={12}>
               <Title level={4} id={styleAbout.aboutLabel}>Our Solutions</Title>
               {about.solution.map((text, index) => {
                 return (

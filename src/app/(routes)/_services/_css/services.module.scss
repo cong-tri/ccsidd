@@ -4,34 +4,22 @@
 // --------- start service page ---------
 #services {
   height: 100%;
-  .bgBlack{
+  .bgBlack {
     background-color: $bg-black;
   }
   #serItems {
     // text-align: center;
     margin: auto;
     #serItemsImage {
-      object-fit: contain;
-      margin: 0 auto;
+      display: block;
+      height: revert-layer;
+      width: -webkit-fill-available;
+      border-radius: 10px;
       @media screen and (min-width: 360px) {
-        height: 50px;
-        width: 50px;
+        height: 300px;
       }
       @media screen and (min-width: 768px) {
-        height: 5rem;
-        width: 5rem;
-      }
-      @media screen and (min-width: 1280px) {
-        height: 8.5rem;
-        width: 8.5rem;
-      }
-      @media screen and (min-width: 1824px) {
-        height: 150px;
-        width: 150px;
-      }
-      @media screen and (max-height: 440px) {
-        width: 50px;
-        height: 50px;
+        height: revert-layer;
       }
     }
     #serItemsTitle {
@@ -42,10 +30,10 @@
       letter-spacing: 0.28px;
       text-transform: uppercase;
       @media screen and (min-width: 360px) {
-        font-size: 25px;
+        font-size: 28px;
       }
       @media screen and (min-width: 768px) {
-        font-size: 30px;
+        font-size: 36px;
       }
       @media screen and (min-width: 1280px) {
         font-size: 40px;
@@ -55,10 +43,10 @@
         margin: 6px 0;
       }
     }
-    #serItemsName{
+    #serItemsName {
       font-size: 24px;
       color: $color-white;
-      background-color: $color-blue2; 
+      background-color: $color-blue2;
       margin: 0;
       padding: 16px;
       width: auto;
@@ -83,9 +71,9 @@
       @media screen and (min-width: 360px) {
         font-size: 16px;
       }
-      // @media screen and (min-width: 768px) {
-      //   font-size: 16px;
-      // }
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
       @media screen and (min-width: 1280px) {
         font-size: 18px;
       }
@@ -114,6 +102,81 @@
         font-size: 18px;
       }
     }
+    #serItemsOverlay {
+      position: relative;
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s all;
+        background-color: $color-blue2;
+        transform: translateY(100%);
+        border-radius: 10px;
+        padding: 2rem;
+        h1 {
+          color: $color-white;
+          font-size: 26px;
+          font-weight: bold;
+          @media screen and (min-width: 360px) {
+            font-size: 20px;
+          }
+          @media screen and (min-width: 768px) {
+            font-size: 24px;
+          }
+          @media screen and (min-width: 1280px) {
+            font-size: 26px;
+          }
+        }
+        p {
+          color: $color-white;
+          font-weight: 500;
+          font-size: 18px;
+          @media screen and (min-width: 360px) {
+            font-size: 16px;
+          }
+          @media screen and (min-width: 768px) {
+            font-size: 18px;
+          }
+        }
+        button {
+          font-size: 18px;
+          color: $color-white;
+          font-weight: 500;
+          transition: all 0.5s;
+          &:hover {
+            color: black;
+          }
+
+          @media screen and (min-width: 360px) {
+            font-size: 16px;
+          }
+          @media screen and (min-width: 1280px) {
+            font-size: 18px;
+          }
+        }
+        @media screen and (min-width: 360px) {
+          padding: 1rem;
+        }
+        @media screen and (min-width: 768px) {
+          padding: 1.5rem;
+        }
+        @media screen and (min-width: 1280px) {
+          padding: 2rem;
+        }
+      }
+      &:hover {
+        .overlay {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+    }
+
     @media screen and (max-height: 440px) {
       width: 50%;
     }

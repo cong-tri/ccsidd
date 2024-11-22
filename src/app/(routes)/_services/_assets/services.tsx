@@ -36,7 +36,7 @@ export const services: ListServices[] = [
         </p>
       </>
     ),
-    img: "/images/service/ser-item-2.png",
+    img: "/images/service/mvno.jpg",
   },
 
   {
@@ -60,7 +60,7 @@ export const services: ListServices[] = [
         </p>
       </>
     ),
-    img: "/images/service/ser-item-5.png",
+    img: "/images/service/rtone-logo.png",
   },
 
   {
@@ -90,7 +90,7 @@ export const services: ListServices[] = [
         </p>
       </>
     ),
-    img: "/images/service/ser-item-6.png",
+    img: "/images/service/icf.jpg",
   },
 
   {

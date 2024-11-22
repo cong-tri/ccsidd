@@ -17,15 +17,14 @@
       font-size: 20px;
       margin-bottom: 1rem;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
       font-size: 24px;
       margin-bottom: 2rem;
     }
   }
   #aboutImage {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    // height: 100%;
+    width: -webkit-fill-available;
   }
   #aboutLabel {
     font-size: 24px;
@@ -36,7 +35,7 @@
       font-size: 20px;
       margin-bottom: 12px;
     }
-    @media screen and (min-width: 360px) {
+    @media screen and (min-width: 768px) {
       font-size: 24px;
       margin-bottom: 1rem;
     }
@@ -48,7 +47,7 @@
     @media screen and (min-width: 360px) {
       font-size: 16px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
       font-size: 18px;
     }
   }

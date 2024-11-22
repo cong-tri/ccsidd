@@ -4,52 +4,22 @@
 import React from "react";
 
 import Image from "next/image";
-import Link from "next/link";
 
-import { Col, Modal, Row, Space } from "antd";
+import { Col, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
+
+import ModalService from "./ModalService";
 
 import { ListServices, services } from "../_assets/services";
 
 import styleServices from "../_css/services.module.scss";
-import styleModal from "../_css/modal.module.scss";
 import styleGlobal from "../../../../styles/index.module.scss";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 const ItemsServices = () => {
   const [open, setOpen] = React.useState(false);
   const [data, setData] = React.useState<ListServices>();
-
-  const ModalService = ({ data }: { data?: ListServices }) => {
-    if (!data) {
-      return;
-    }
-    const { name, description } = data;
-
-    return (
-      <>
-        <Modal
-          centered
-          open={open}
-          footer={false}
-          onCancel={() => setOpen(false)}
-          width={1000}
-        >
-          <Title level={1} id={styleModal.modSerName}>
-            {name}
-          </Title>
-          <Paragraph id={styleModal.modSerDesc}>{description}</Paragraph>
-          <p className="text-right">
-            For more information, please kindly{" "}
-            <Link href={"/contact"} className={styleGlobal.colorBlue2}>
-              contact
-            </Link>{" "}
-            us.
-          </p>
-        </Modal>
-      </>
-    );
-  };
 
   return (
     <>
@@ -64,26 +34,48 @@ const ItemsServices = () => {
             >
               <Row
                 align={"middle"}
-                className={`container ${index === 0 ? "pb-10 xl:pb-20" : "py-10 xl:py-20"}`}
+                justify={"space-between"}
+                className={`container ${index === 0 ? "pb-10 xl:pb-20" : "py-10 xl:py-20"
+                  }`}
               >
                 <Col
                   xs={24}
                   xl={10}
+                  id={styleServices.serItemsOverlay}
                   className={`order-last ${(index + 1) % 2 === 0 ? "xl:order-first" : ""
                     }`}
                 >
                   <Image
                     src={item.img}
                     quality={100}
-                    width={100}
-                    height={100}
+                    width={450}
+                    height={400}
+                    objectFit="contain"
                     id={styleServices.serItemsImage}
                     alt={item.title}
                   />
+
+                  <div className={styleServices.overlay}>
+                    <Title level={1}>{item.name}</Title>
+                    <Paragraph
+                      ellipsis={{
+                        rows: 5,
+                      }}
+                    >
+                      {item.description}
+                    </Paragraph>
+                    <div className="text-right">
+                      <button onClick={() => {
+                        setOpen(true);
+                        setData(item);
+                      }}>View more <ArrowRightOutlined /></button>
+                    </div>
+                  </div>
                 </Col>
+
                 <Col
                   xs={24}
-                  xl={14}
+                  xl={13}
                   className={`${(index + 1) % 2 !== 0 ? "text-right" : "float-left"
                     }`}
                 >
@@ -91,13 +83,18 @@ const ItemsServices = () => {
                     {item.title}
                   </Title>
 
-                  <div className={`flex ${(index + 1) % 2 !== 0 ? 'flex-row-reverse' : ''} align-middle pb-4`}>
+                  <div
+                    className={`flex ${(index + 1) % 2 !== 0 ? "flex-row-reverse" : ""
+                      } align-middle pb-4`}
+                  >
                     <Title level={1} id={styleServices.serItemsName}>
                       {item.name}
                     </Title>
                     <div
                       className={`py-4 px-5 text-xl xl:text-2xl rounded-lg font-bold ${(index + 1) % 2 !== 0
-                        ? styleServices.bgBlack + " " + "text-white order-first ml-6"
+                        ? styleServices.bgBlack +
+                        " " +
+                        "text-white order-first ml-6"
                         : "bg-white text-black order-first mr-6"
                         }`}
                     >
@@ -115,18 +112,6 @@ const ItemsServices = () => {
                   >
                     {item.description}
                   </Paragraph>
-                  <div className="text-right">
-                    <button
-                      id={styleServices.serItemsBtnSeeMore}
-                      className={`${styleGlobal.colorChanging}`}
-                      onClick={() => {
-                        setOpen(true);
-                        setData(item);
-                      }}
-                    >
-                      <i>see more</i>
-                    </button>
-                  </div>
                 </Col>
               </Row>
             </div>
@@ -134,7 +119,7 @@ const ItemsServices = () => {
         );
       })}
 
-      <ModalService data={data} />
+      <ModalService data={data} open={open} setOpen={setOpen} />
     </>
   );
 };

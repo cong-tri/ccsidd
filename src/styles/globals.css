@@ -149,7 +149,7 @@ header {
   }
   .ant-collapse-header {
     padding: 10px !important;
-    font-size: 16px !important;
+    font-size: 20px !important;
   }
   .ant-collapse-content-box {
     padding: 0;
@@ -159,6 +159,9 @@ header {
   }
   .ant-timeline .ant-timeline-item {
     padding-bottom: 20px !important;
+  }
+  .ant-tabs .ant-tabs-tab {
+    font-size: 16px !important;
   }
 }
 @media screen and (min-width: 768px) {

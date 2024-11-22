@@ -10,15 +10,6 @@ import { Carousel, Col, Row } from "antd";
 import styleComponent from "../_css/banner.module.scss";
 import styles from "../../../../styles/index.module.scss";
 
-const contentStyle: React.CSSProperties = {
-  margin: 0,
-  height: "100vh",
-  color: "black",
-  lineHeight: "100vh",
-  textAlign: "center",
-  width: "100%",
-};
-
 type BannerList = {
   slogan: React.ReactElement;
   label: string;
@@ -74,19 +65,20 @@ const Banner = () => {
                 <div className="relative h-screen w-full mt-8">
                   <h1 id={styleComponent.bannerSlogan}>{items.slogan}</h1>
 
-                  <div className="absolute container w-full h-full top-48">
-                    <Row align={"top"} justify={"center"} gutter={[24, 24]}>
-                      <Col xs={10} md={14}>
+                  <div className="absolute container w-full h-full top-16 md:top-60 xl:top-40">
+                    <Row align={"middle"} justify={"center"} gutter={[24, 24]}>
+                      <Col xs={24} md={12}>
                         <Image
-                          src={"/images/CCS-logo.png"}
+                          id={styleComponent.bannerImage}
+                          src={"/images/splash/colourglobe_new.png"}
                           alt="Logo CCSIDD"
-                          className="float-right h-full"
+                          className="mx-auto xl:float-right"
                           width={300}
                           height={400}
                           quality={100}
                         />
                       </Col>
-                      <Col xs={14} md={10}>
+                      <Col xs={24} md={12}>
                         <div id={styleComponent.bannerContent}>
                           <h1>{items.label}</h1>
                           <p>{items.content}</p>
