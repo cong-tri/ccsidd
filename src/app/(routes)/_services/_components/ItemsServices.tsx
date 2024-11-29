@@ -50,25 +50,21 @@ const ItemsServices = () => {
                     quality={100}
                     width={450}
                     height={400}
-                    objectFit="contain"
+                    // objectFit="contain"
                     id={styleServices.serItemsImage}
                     alt={item.title}
                   />
 
                   <div className={styleServices.overlay}>
-                    <Title level={1}>{item.name}</Title>
-                    <Paragraph
-                      ellipsis={{
-                        rows: 5,
-                      }}
-                    >
-                      {item.description}
-                    </Paragraph>
-                    <div className="text-right">
-                      <button onClick={() => {
-                        setOpen(true);
-                        setData(item);
-                      }}>View more <ArrowRightOutlined /></button>
+                    <div className={`relative h-full`}>
+                      <Title level={1}>{item.title}</Title>
+                      <Title level={3}>0{index + 1}. {item.name}</Title>
+                      <div className="absolute bottom-0 right-0 text-right">
+                        <button onClick={() => {
+                          setOpen(true);
+                          setData(item);
+                        }}>View more <ArrowRightOutlined /></button>
+                      </div>
                     </div>
                   </div>
                 </Col>

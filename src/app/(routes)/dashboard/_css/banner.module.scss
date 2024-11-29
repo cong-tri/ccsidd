@@ -109,13 +109,13 @@
     }
 
     button {
-      background-color: #00a6b2;
+      background-color: #3abec7;
       border-radius: 2px;
       border: none;
       padding: 10px 20px;
 
       &:hover {
-        background-color: #1565c0;
+        background-color: $color-blue1;
       }
 
       a {
